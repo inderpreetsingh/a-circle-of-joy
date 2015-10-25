@@ -1,0 +1,53 @@
+a { color: $accent; }
+
+strong { font-weight:bold;}
+
+em { 
+  font-weight:300; 
+  font-style:normal;
+}
+
+.content-font em { font-style: italic; }
+
+.spacious-text {
+  line-height:2;
+  padding:0.25rem;
+}
+
+.side-free-text {
+  padding: auto 2rem auto 2rem;
+}
+
+h1.branding {
+  font-size: 1.5rem;
+  color: $dead-black;
+  .tagline {
+     font-weight:300;
+  }
+}
+
+h2.special-title {
+  font-weight:300;
+  margin-bottom:0px;
+  line-height:1;
+}
+
+h3.st-support {
+  @extend .large-text;
+  font-weight:300;
+}
+
+.special-text {
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+blockquote {
+  @extend .large-text;
+  margin-left: 2rem;
+  border-left: 5px solid $accent;
+  padding-left: 1rem;
+  color: $accent;
+  font-family:$cursive-font; 
+}	

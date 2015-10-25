@@ -1,0 +1,27 @@
+@mixin background-hover($baseColor){
+    background-color: $baseColor;
+    &:hover {
+          background-color: darken($baseColor, 10%);
+    }
+}
+
+html, button {
+  font-family: $interface-font;
+  font-size: $base-text;
+  color: $horse-black;
+  line-height: 1.5;
+}
+
+.content-font {
+  font-family: $content-font;
+}
+
+.curved { 
+    border-radius: 3px;
+}
+
+.round { 
+    border-radius: 1.5rem; 
+    min-height: 3rem;
+    line-height: 3rem;
+}

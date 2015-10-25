@@ -1,0 +1,34 @@
+.bar {
+  @extend .spacious-text; 
+  background:$snow-white;
+  margin-bottom: 0.5rem;
+  text-align:center;
+}
+
+.special-bar {
+  @extend .bar;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+aside {
+  border-radius: 1rem;
+  background: $semi-blue;
+  max-width:25rem;
+  min-height:8rem;
+  margin:auto;
+  padding: 1rem;
+  color: $accent;
+}
+
+.focal-bg { background:$focal; }
+.accent-bg { background:$accent; }
+.primary-bg { background:$primary; }
+.dead-black-bg { background:$dead-black; }
+.king-black-bg { background:$king-black; }
+.bishop-black-bg { background: $bishop-black; }
+.horse-black-bg { background: $horse-black; }
+.grey-joy-bg { background: $grey-joy; }
+.dead-white-bg { background: $dead-white; }
+.snow-white-bg { background: $snow-white; }
+

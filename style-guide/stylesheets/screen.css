@@ -1,0 +1,379 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/****************************
+** File for external imports
+*****************************/
+/* Fonts from google */
+/************************************
+** File containing all the colors
+************************************/
+/* Basic colors */
+/* Basic colors used for a purpose */
+/**********************************
+** Fonts used in the whole website
+***********************************/
+/* line 8, ../sass/partials/_globals.scss */
+html, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 19px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* line 15, ../sass/partials/_globals.scss */
+.content-font {
+  font-family: "Crimson Text", serif;
+}
+
+/* line 19, ../sass/partials/_globals.scss */
+.curved, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+  border-radius: 3px;
+}
+
+/* line 23, ../sass/partials/_globals.scss */
+.round, .round-btn, .right-split, .left-split {
+  border-radius: 1.5rem;
+  min-height: 3rem;
+  line-height: 3rem;
+}
+
+/* line 1, ../sass/partials/typography/_type_scale.scss */
+.small-text {
+  font-size: 0.75rem;
+}
+
+/* line 5, ../sass/partials/typography/_type_scale.scss */
+h6, .large-text, h3.st-support, blockquote, .special-btn {
+  font-size: 1.25rem;
+}
+
+/* line 9, ../sass/partials/typography/_type_scale.scss */
+h5 {
+  font-size: 1.5rem;
+}
+
+/* line 13, ../sass/partials/typography/_type_scale.scss */
+h4 {
+  font-size: 2rem;
+}
+
+/* line 17, ../sass/partials/typography/_type_scale.scss */
+h3 {
+  font-size: 2.5rem;
+}
+
+/* line 21, ../sass/partials/typography/_type_scale.scss */
+h2 {
+  font-size: 3rem;
+}
+
+/* line 25, ../sass/partials/typography/_type_scale.scss */
+h1 {
+  font-size: 3.5rem;
+}
+
+/* line 29, ../sass/partials/typography/_type_scale.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* line 1, ../sass/partials/typography/_type_colors.scss */
+h1, h2, h3 {
+  color: #333;
+}
+
+/* line 5, ../sass/partials/typography/_type_colors.scss */
+h4, h5, h6, p.large-text, p.special-btn {
+  color: #444;
+}
+
+/* line 9, ../sass/partials/typography/_type_colors.scss */
+.snow-white-txt {
+  color: #fafafa;
+}
+
+/* line 10, ../sass/partials/typography/_type_colors.scss */
+.king-black-txt {
+  color: #333;
+}
+
+/* line 1, ../sass/partials/typography/_type_components.scss */
+a {
+  color: #3498db;
+}
+
+/* line 3, ../sass/partials/typography/_type_components.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 5, ../sass/partials/typography/_type_components.scss */
+em {
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* line 10, ../sass/partials/typography/_type_components.scss */
+.content-font em {
+  font-style: italic;
+}
+
+/* line 12, ../sass/partials/typography/_type_components.scss */
+.spacious-text, .bar, .special-bar, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+  line-height: 2;
+  padding: 0.25rem;
+}
+
+/* line 17, ../sass/partials/typography/_type_components.scss */
+.side-free-text {
+  padding: auto 2rem auto 2rem;
+}
+
+/* line 21, ../sass/partials/typography/_type_components.scss */
+h1.branding {
+  font-size: 1.5rem;
+  color: #000;
+}
+/* line 24, ../sass/partials/typography/_type_components.scss */
+h1.branding .tagline {
+  font-weight: 300;
+}
+
+/* line 29, ../sass/partials/typography/_type_components.scss */
+h2.special-title {
+  font-weight: 300;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+/* line 35, ../sass/partials/typography/_type_components.scss */
+h3.st-support {
+  font-weight: 300;
+}
+
+/* line 40, ../sass/partials/typography/_type_components.scss */
+.special-text {
+  color: #3498db;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 46, ../sass/partials/typography/_type_components.scss */
+blockquote {
+  margin-left: 2rem;
+  border-left: 5px solid #3498db;
+  padding-left: 1rem;
+  color: #3498db;
+  font-family: "Dancing Script", cursive;
+}
+
+/* line 1, ../sass/partials/_bars_and_blocks.scss */
+.bar, .special-bar {
+  background: #fafafa;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* line 8, ../sass/partials/_bars_and_blocks.scss */
+.special-bar {
+  height: 3rem;
+  line-height: 3rem;
+}
+
+/* line 14, ../sass/partials/_bars_and_blocks.scss */
+aside {
+  border-radius: 1rem;
+  background: rgba(52, 152, 219, 0.5);
+  max-width: 25rem;
+  min-height: 8rem;
+  margin: auto;
+  padding: 1rem;
+  color: #3498db;
+}
+
+/* line 24, ../sass/partials/_bars_and_blocks.scss */
+.focal-bg {
+  background: #f1c40f;
+}
+
+/* line 25, ../sass/partials/_bars_and_blocks.scss */
+.accent-bg {
+  background: #3498db;
+}
+
+/* line 26, ../sass/partials/_bars_and_blocks.scss */
+.primary-bg {
+  background: #87d37c;
+}
+
+/* line 27, ../sass/partials/_bars_and_blocks.scss */
+.dead-black-bg {
+  background: #000;
+}
+
+/* line 28, ../sass/partials/_bars_and_blocks.scss */
+.king-black-bg {
+  background: #333;
+}
+
+/* line 29, ../sass/partials/_bars_and_blocks.scss */
+.bishop-black-bg {
+  background: #444;
+}
+
+/* line 30, ../sass/partials/_bars_and_blocks.scss */
+.horse-black-bg {
+  background: #666;
+}
+
+/* line 31, ../sass/partials/_bars_and_blocks.scss */
+.grey-joy-bg {
+  background: #ccc;
+}
+
+/* line 32, ../sass/partials/_bars_and_blocks.scss */
+.dead-white-bg {
+  background: #fff;
+}
+
+/* line 33, ../sass/partials/_bars_and_blocks.scss */
+.snow-white-bg {
+  background: #fafafa;
+}
+
+/* line 1, ../sass/partials/_buttons.scss */
+button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+  cursor: pointer;
+  border: 0px;
+  color: #333;
+  background-color: #87d37c;
+}
+/* line 3, ../sass/partials/_globals.scss */
+button:hover, .accent-btn:hover, .focal-btn:hover, .primary-btn:hover, .hollow-btn:hover, .special-btn:hover {
+  background-color: #64c656;
+}
+
+/* line 10, ../sass/partials/_buttons.scss */
+.accent-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+/* line 3, ../sass/partials/_globals.scss */
+.accent-btn:hover {
+  background-color: #217dbb;
+}
+
+/* line 16, ../sass/partials/_buttons.scss */
+.focal-btn {
+  background-color: #f1c40f;
+}
+/* line 3, ../sass/partials/_globals.scss */
+.focal-btn:hover {
+  background-color: #c29d0b;
+}
+
+/* line 21, ../sass/partials/_buttons.scss */
+.primary-btn {
+  background-color: #87d37c;
+}
+/* line 3, ../sass/partials/_globals.scss */
+.primary-btn:hover {
+  background-color: #64c656;
+}
+
+/* line 26, ../sass/partials/_buttons.scss */
+.hollow-btn {
+  background-color: transparent;
+  border: 1px solid #333;
+}
+/* line 3, ../sass/partials/_globals.scss */
+.hollow-btn:hover {
+  background-color: transparent;
+}
+
+/* line 37, ../sass/partials/_buttons.scss */
+.round-btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 43, ../sass/partials/_buttons.scss */
+.right-split {
+  border-radius: 0px 1.5rem 1.5rem 0px;
+}
+
+/* line 48, ../sass/partials/_buttons.scss */
+.left-split {
+  border-radius: 1.5rem 0px 0px 1.5rem;
+}
