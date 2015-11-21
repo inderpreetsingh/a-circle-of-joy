@@ -1,0 +1,21 @@
+    /************************************
+** File containing all the colors
+************************************/
+/* Basic colors */
+$yellow: rgba(252,205,75,1.0);
+$blue: rgba(52,152,219,1.0);
+$semi-blue: rgba(52,152,219,0.5);
+$green: rgba(135,211,124,1.0);
+$dead-black: #000;
+$king-black: #333;
+$bishop-black: #444;
+$horse-black: #666;
+$grey-joy: #ccc;
+$dead-white: #fff;
+$snow-white: #fafafa;
+
+/* Basic colors used for a purpose */
+$focal: $yellow;
+$accent: $blue;
+$primary: $green;
+$accent-light: $semi-blue;

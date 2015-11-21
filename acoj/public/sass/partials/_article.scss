@@ -1,0 +1,57 @@
+.article-container {
+    @include container(700px);
+    margin-bottom: 3rem;
+}
+
+.article-title {
+    @extend h3;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.article-header {
+    margin-bottom: 1.5rem;
+}
+
+.post-content {
+
+    > p:first-child {
+       @extend .large-text;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        margin-top:1rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        color:$bishop-black;
+        text-transform: none;
+    }
+
+    h1,h2,h3 {
+        @extend h4;
+    }
+
+    h1,h2 {
+        font-weight: 700;
+    }
+
+    ul,ol {
+        margin-left:2rem;
+    }
+    ul { list-style: circle;}
+    ol { list-style: decimal;}
+}
+
+article.excerpts {
+    h2 a { @extend h4; }
+}
+
+.left-container {
+    max-width: 700px;
+}
+
+.post-image img {
+  width:100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}

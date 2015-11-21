@@ -1,0 +1,27 @@
+// Requirements
+// ============
+
+@import "susy";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+.container {
+  @include container(900px);
+  padding: 1rem;
+}
+
+.large-container {
+    @include container(1300px);
+    padding: 1rem;
+}
+
+.sub-panel {
+  @include span(2 of 4);
+}
+
+.last-sub-panel {
+    @include span(2 of 4);
+}

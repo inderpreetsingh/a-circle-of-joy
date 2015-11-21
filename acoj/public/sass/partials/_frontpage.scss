@@ -1,0 +1,305 @@
+.f-panel{
+	margin-top:.5rem;
+	margin-bottom:1.5rem;
+}
+
+.front-page-title{
+    padding-top:20vh;
+    text-align:center;
+}
+
+.fp-title-small{
+	font-size:2rem;
+}
+
+.fp-st-support{
+	font-size:1rem;
+}
+
+.transparent-btn{
+    background:rgba(51,51,51,0.5);
+    color:#fafafa;
+}
+
+.transparent-btn:hover{
+    background:rgba(51,51,51,0.8);
+}
+
+.button-list{
+    text-align:center;
+    > button{
+        margin:1rem;
+    }
+}
+
+.icon{
+	color:$snow-white;
+	font-size:2rem;
+}
+
+.menu-icon-container{
+	@extend .circle;
+	color: $accent;
+	text-align:center;
+	position:fixed;
+	width:2rem;
+	height: 2rem;
+	right:0.5rem;
+	top:0.5rem;
+	text-shadow: 1px 1px rgba($dead-white, 0.5);
+	> i {
+		color:$accent;
+		font-size:1rem;
+		line-height:2rem;
+	}
+	&::after{
+		@extend .special-text;
+		color: $king-black;
+		display:block;
+		content:"MENU";
+		letter-spacing: 2px;
+		font-size: 0.5rem;
+		font-family:$interface-font;
+	}
+}
+
+.icon-down-arrow{
+	color:$accent;
+}
+
+.icon-down-container{
+	text-align:center;
+	margin-top:4rem;
+}
+
+.circle{
+	border-radius: 50%;
+	border: 1px solid;
+	display: inline-block;
+}
+
+.icon-container {
+	width:2rem;
+	height: 2rem;
+	display: inline-block;
+	border-radius: 50%;
+	background: rgba($dead-black, 0.2);
+	margin-left: 1rem
+}
+
+.icon-call-phone{
+	font-size: 1rem;
+	display: block;
+}
+
+.callout{
+   position:relative;
+    max-width:32.5rem;
+    margin:auto;
+    .input-label{
+        text-indent:2rem;
+    }
+    .icon-label{
+        text-indent:-2rem;
+    }
+		@include media("<tablet"){
+				display:none;
+		}
+		blockquote {
+			@extend .speech-tail;
+		}
+
+}
+.speech-tail{
+	position:relative;
+   &::before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom:-10px;
+	border:5px solid;
+	border-color: rgba(251,251, 251, 0.7) transparent transparent rgba(251,251,251, 0.7) ;
+}
+}
+
+.tail-less::before { display:none; }
+.input-callout{
+    border-radius:0.5rem;
+    border:none;
+    background:rgba(251,251,251,0.7);
+}
+
+#about-panel{
+    .text-sub-panel > p {
+	margin-top:2rem;
+	margin-bottom:2rem;
+    }
+    .about-title{
+	margin-top:4rem;
+    }
+    .about-text{
+	@include media("<tablet"){
+	  display:none;
+	}
+     }
+}
+
+.blue-box{
+    float:right;
+    margin-top: 1.5rem;
+
+    .special-text, .small-text{
+        text-align: center;
+    }
+
+    aside{
+			@extend .speech-tail;
+			&::before { border-color: rgba($accent,0.5) transparent transparent rgba($accent,0.5);}
+        color: $king-black;
+	width: 60%;
+
+	@include media("<tablet"){
+		width:80%;
+	}
+    }
+    @include last;
+    @include media("<tablet"){
+        width:100%;
+    }
+}
+
+.avatar-text{
+	width:12rem;
+}
+
+.tiny-avatar{
+    width: 7rem;
+    height: auto;
+    margin-left: 2rem;
+}
+
+.text-sub-panel{
+    @include media("<tablet"){
+        width:100%;
+    }
+}
+
+#services-panel{
+	margin-top:2rem;
+	text-align:center;
+	.service-text{
+		margin-top:1.5rem;
+		@include media("<500px"){
+			display:none;
+		}
+	}
+}
+
+.front-title{
+	font-size:2.5rem;
+}
+
+.services-container{
+	margin-top:3rem;
+}
+
+.service-icon-container{
+	background:$horse-black;
+	border-radius:50%;
+	opacity:0.5;
+	width:4rem;
+	height:4rem;
+	display:inline-block;
+	position:relative;
+	top:-0.75rem;
+}
+
+.service-icon{
+	line-height:4rem;
+}
+
+.right-panel{
+	float:right;
+	margin-right:0px;
+    	@include last;
+	@include media("<500px"){
+		margin-top:5rem;
+		width:100%;
+	}
+}
+
+.left-panel{
+	@include media("<500px"){
+		width:100%;
+	}
+}
+
+.second-row{
+	margin-top:5rem;
+}
+
+.service-name{
+    color: $horse-black;
+    width:8rem;
+    display:inline-block;
+    vertical-align:.5rem;
+    text-shadow: 1px 1px 1px $snow-white;
+}
+
+.left-text{
+    text-align: right;
+}
+
+.right-text{
+    text-align: left;
+}
+
+.coach-img{
+	width:7.5rem;
+	height:auto;
+	margin:1rem;
+	margin-top:3rem;
+}
+
+.coach-1{
+	margin-left:0;
+}
+
+.rounded-input-box{
+	width:80%;
+	height:2.5rem;
+	display:block;
+	margin:auto;
+	border:none;
+	border-radius:1rem;
+	text-align:center;
+	font-size:1rem;
+	font-family:$interface-font;
+}
+
+.email-label{
+	text-align:center;
+	margin-bottom:1rem;
+	color:$blue;
+	font-size:1.25rem;
+}
+
+.signup-btn{
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 2rem;
+    width:7rem;
+}
+
+.other-container{
+	margin-bottom:1.5rem;
+}
+
+.coach-panel{
+	text-align:center;
+	@include media("<tablet"){
+		width:100%;
+	}
+}

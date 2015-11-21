@@ -1,0 +1,58 @@
+.brand-logo {
+  float:left;
+  margin-top:0.5rem;
+  width:4rem;
+  height:4rem;
+  border-radius:2rem;
+  background:$dead-white;
+  img {
+    margin:0.5rem 0.5rem;
+    width:3rem;
+    vertical-align:center;
+  }
+}
+
+.logo-front {
+  margin-top:0rem !important;
+  background:transparent;
+}
+
+html {
+  height:100%;
+}
+
+body {
+  height:100%;
+}
+
+.site-wrapper {
+  height:100%;
+}
+
+.panel {
+  background-size:cover;
+  background-position:center center;
+}
+
+.focal-panel {
+  border-bottom: 5px solid $focal;
+}
+
+.accent-panel {
+  border-bottom: 5px solid $accent;
+}
+
+.grey-panel {
+  border-bottom: 5px solid $grey-joy;
+}
+
+.full-height-panel {
+    min-height: 85%;
+}
+
+.dark-panel {
+  @extend .panel;
+  background:$king-black;
+  height:50%;
+  min-height:300px;
+}

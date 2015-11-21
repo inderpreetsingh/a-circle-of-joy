@@ -1,0 +1,70 @@
+a { color: $accent; }
+
+strong { font-weight:bold;}
+
+em { 
+  font-weight:300; 
+  font-style:normal;
+}
+
+blockquote {
+  @extend .large-text;
+  margin-left: 2rem;
+  border-left: 5px solid $accent;
+  padding-left: 1rem;
+  color: $accent;
+  font-family:$cursive-font; 
+}	
+
+code {
+    background: $snow-white;
+    color:$horse-black;
+    font-family: monospace;
+}
+
+h1.branding {
+  @extend .large-text;
+  color: $dead-black;
+  margin-bottom:0rem;
+  
+  .tagline {
+     font-weight:300;
+     color: $king-black;
+     @include media("<tablet") { display:none;}
+  }
+
+  @include media ("<tablet") { text-align:center;}
+}
+
+h1.front-branding {
+  line-height: 4rem;
+  text-shadow: 0px 0px 2px $dead-white;
+}
+.content-font em { font-style: italic; }
+
+.spacious-text , .spacious-text a {
+  line-height:2;
+  padding:0.25rem;
+}
+
+.side-free-text {
+  padding: auto 2rem auto 2rem;
+}
+
+
+h2.special-title , h2.special-title a{
+  font-weight:300;
+  margin-bottom:0px;
+  line-height:1;
+}
+
+h3.st-support, h3.st-support a {
+  @extend .large-text;
+  font-weight:300;
+}
+
+.special-text {
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

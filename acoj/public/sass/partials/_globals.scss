@@ -1,0 +1,55 @@
+@mixin background-hover($baseColor){
+    background-color: $baseColor;
+    @include transition-property(background-color);
+    @include transition-duration(0.6s);
+    &:hover {
+        background-color: darken($baseColor, 10%);
+    }
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html, button {
+    font-family: $interface-font;
+    font-size: $base-text;
+    color: $horse-black;
+    line-height: 1.5;
+    @include media ("<700px") {
+        font-size:16px;
+    }
+}
+
+a {
+    text-decoration:none;
+}
+
+.content-font {
+    font-family: $content-font;
+}
+
+.interface-font {
+  font-family: $interface-font;
+}
+
+.curved {
+    border-radius: 3px;
+}
+
+.round {
+    border-radius: 1.5rem;
+    min-height: 3rem;
+    line-height: 3rem;
+}
+
+.page-wrapper {
+    margin-top: 100px;
+    min-height: 100%;
+    img { max-width: 100%; }
+}
+
+.polythene {
+    @include background-image(linear-gradient($dead-white, rgba(255,255,255,0)));
+    height:100%;
+}

@@ -1,0 +1,56 @@
+button {
+  @extend .curved;
+  @extend .spacious-text;
+  cursor: pointer;
+  border: 0px;
+  color: $king-black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include background-hover($primary);
+  a {
+    color:inherit;
+  }
+}
+
+.accent-btn {
+   @extend button;
+   @include background-hover($accent);
+   color: $dead-white;
+}
+
+.focal-btn {
+  @extend button;
+  @include background-hover($focal);
+}
+
+.primary-btn {
+  @extend button;
+  @include background-hover ($primary);
+}
+
+.hollow-btn {
+  @extend button;
+  @include background-hover (transparent);
+  border: 1px solid $king-black;
+}
+
+.special-btn {
+  @extend button;
+  @extend .large-text;
+}
+
+.round-btn {
+  @extend .round;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.right-split {
+  @extend .round;
+  border-radius: 0px 1.5rem 1.5rem 0px;
+ }
+
+.left-split {
+  @extend .round;
+  border-radius: 1.5rem 0px 0px 1.5rem;
+}
