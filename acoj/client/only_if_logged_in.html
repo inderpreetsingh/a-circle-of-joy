@@ -1,0 +1,23 @@
+<template name="onlyIfLoggedIn">
+  {{#if authInProcess}}
+    <p>loading ...</p>
+  {{else}}
+    {{#if canShow}}
+      {{> UI.contentBlock }}
+    {{else}}
+      {{> login}}
+    {{/if}}
+  {{/if}}
+</template>
+
+<template name="onlyIfLoggedOut">
+  {{#if deauthInProcess}}
+    <p>loggingOut ...</p>
+  {{else}}
+    {{#if canShow}}
+      {{> UI.contentBlock }}
+    {{else}}
+      <h4> you are already logged in </h4>
+    {{/if}}
+  {{/if}}
+</template>

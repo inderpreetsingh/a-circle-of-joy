@@ -11,8 +11,11 @@
 @import "partials/typography/typography"; // typography rules
 @import "partials/bars_and_blocks"; //list of bars and blocks
 @import "partials/buttons"; //styles for buttons
-@import "partials/components"; //styles for various block level components 
+@import "partials/components"; //styles for various block level components
 @import "partials/grids"; // styles for grids
 @import "partials/article";
 
 @import "partials/frontpage"; //styles for front page
+@import "partials/auth"; //styles for auth pages
+@import "partials/notifications"; //styles for notifications
+@import "partials/dashboard"; //styles for notifications

@@ -1,0 +1,13 @@
+<template name="dashboard">
+  {{#onlyIfLoggedIn}}
+  {{> dashboardContent}}
+  {{/onlyIfLoggedIn}}
+</template>
+
+<template name="dashboardContent">
+  <div class="auth-wrapper">
+    <div class="dense-polythene">
+      {{> logOut }}
+    </div>
+  </div>
+</template>

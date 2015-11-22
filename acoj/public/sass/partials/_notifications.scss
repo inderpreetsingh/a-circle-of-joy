@@ -1,0 +1,33 @@
+.s-alert-error.s-alert-effect-genie,
+.s-alert-success.s-alert-effect-genie,
+.s-alert-info.s-alert-effect-genie,
+.s-alert-warning.s-alert-effect-genie  {
+  @extend .small-text;
+  border-radius: 500px;
+  font-family: $interface-font;
+  text-shadow: 1px 1px 1px rgba($dead-black, 0.3);
+
+}
+
+.s-alert-close {
+  top: -10px;
+  right: -10px;
+  background: rgba($dead-black, 0.3);
+  border-radius: 50%;
+}
+
+.s-alert-error.s-alert-effect-genie {
+  background-color: rgba($error, 0.7);
+}
+
+.s-alert-success.s-alert-effect-genie {
+  background-color: rgba($primary, 0.7);
+}
+
+.s-alert-info.s-alert-effect-genie {
+  background-color: rgba($accent, 0.7);
+}
+
+.s-alert-warning.s-alert-effect-genie {
+  background-color: rgba($focal, 0.7);
+}

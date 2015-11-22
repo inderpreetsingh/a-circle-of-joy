@@ -5,7 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
-/* line 5, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, .article-title, h4, .post-content h1, .post-content h2, .post-content h3, .post-content .article-title, article.excerpts h2 a, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,45 +27,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -90,7 +90,7 @@ html {
 }
 
 /* line 14, ../sass/partials/_globals.scss */
-html, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+html, button, .accent-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   color: #666;
@@ -98,7 +98,7 @@ html, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
 }
 @media (max-width: 699px) {
   /* line 14, ../sass/partials/_globals.scss */
-  html, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+  html, button, .accent-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
     font-size: 16px;
   }
 }
@@ -119,7 +119,7 @@ a {
 }
 
 /* line 36, ../sass/partials/_globals.scss */
-.curved, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+.curved, button, .accent-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
   border-radius: 3px;
 }
 
@@ -152,12 +152,18 @@ a {
 }
 
 /* line 1, ../sass/partials/typography/_type_scale.scss */
-.small-text, .small-text a {
+.small-text, .s-alert-error.s-alert-effect-genie,
+.s-alert-success.s-alert-effect-genie,
+.s-alert-info.s-alert-effect-genie,
+.s-alert-warning.s-alert-effect-genie, .small-text a, .s-alert-error.s-alert-effect-genie a,
+.s-alert-success.s-alert-effect-genie a,
+.s-alert-info.s-alert-effect-genie a,
+.s-alert-warning.s-alert-effect-genie a {
   font-size: 0.75rem;
 }
 
 /* line 5, ../sass/partials/typography/_type_scale.scss */
-h6, .large-text, blockquote, h1.branding, h3.st-support, .st-support.article-title, h3.st-support a, .st-support.article-title a, .special-btn, .post-content > p:first-child {
+h6, .large-text, blockquote, h1.branding, h3.st-support, .st-support.article-title, h3.st-support a, .st-support.article-title a, .special-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button, .post-content > p:first-child {
   font-size: 1.25rem;
 }
 
@@ -202,7 +208,7 @@ h1, h2, h3, .article-title {
 }
 
 /* line 5, ../sass/partials/typography/_type_colors.scss */
-h4, .post-content h1, .post-content h2, .post-content h3, .post-content .article-title, article.excerpts h2 a, h5, h6, p.large-text, p.special-btn, .post-content > p:first-child {
+h4, .post-content h1, .post-content h2, .post-content h3, .post-content .article-title, article.excerpts h2 a, h5, h6, p.large-text, p.special-btn, .center-form p.login-button, .accounts-dialog p.login-button, .accounts-centered-dialog p.login-button, .post-content > p:first-child {
   color: #444;
 }
 
@@ -232,17 +238,24 @@ a {
 }
 
 /* line 3, ../sass/partials/typography/_type_components.scss */
+input {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* line 5, ../sass/partials/typography/_type_components.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 5, ../sass/partials/typography/_type_components.scss */
+/* line 7, ../sass/partials/typography/_type_components.scss */
 em {
   font-weight: 300;
   font-style: normal;
 }
 
-/* line 10, ../sass/partials/typography/_type_components.scss */
+/* line 12, ../sass/partials/typography/_type_components.scss */
 blockquote {
   margin-left: 2rem;
   border-left: 5px solid #3498db;
@@ -251,71 +264,71 @@ blockquote {
   font-family: "Dancing Script", cursive;
 }
 
-/* line 19, ../sass/partials/typography/_type_components.scss */
+/* line 21, ../sass/partials/typography/_type_components.scss */
 code {
   background: #fafafa;
   color: #666;
   font-family: monospace;
 }
 
-/* line 25, ../sass/partials/typography/_type_components.scss */
+/* line 27, ../sass/partials/typography/_type_components.scss */
 h1.branding {
   color: #000;
   margin-bottom: 0rem;
 }
-/* line 30, ../sass/partials/typography/_type_components.scss */
+/* line 32, ../sass/partials/typography/_type_components.scss */
 h1.branding .tagline {
   font-weight: 300;
   color: #333;
 }
 @media (max-width: 767px) {
-  /* line 30, ../sass/partials/typography/_type_components.scss */
+  /* line 32, ../sass/partials/typography/_type_components.scss */
   h1.branding .tagline {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 25, ../sass/partials/typography/_type_components.scss */
+  /* line 27, ../sass/partials/typography/_type_components.scss */
   h1.branding {
     text-align: center;
   }
 }
 
-/* line 39, ../sass/partials/typography/_type_components.scss */
+/* line 41, ../sass/partials/typography/_type_components.scss */
 h1.front-branding {
   line-height: 4rem;
   text-shadow: 0px 0px 2px #fff;
 }
 
-/* line 43, ../sass/partials/typography/_type_components.scss */
+/* line 45, ../sass/partials/typography/_type_components.scss */
 .content-font em {
   font-style: italic;
 }
 
-/* line 45, ../sass/partials/typography/_type_components.scss */
-.spacious-text, .bar, .special-bar, .fixed-bar, button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn, .spacious-text a, .bar a, .special-bar a, .fixed-bar a, button a, .accent-btn a, .focal-btn a, .primary-btn a, .hollow-btn a, .special-btn a {
+/* line 47, ../sass/partials/typography/_type_components.scss */
+.spacious-text, .bar, .special-bar, .fixed-bar, button, .accent-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button, .focal-btn, .primary-btn, .hollow-btn, .special-btn, .spacious-text a, .bar a, .special-bar a, .fixed-bar a, button a, .accent-btn a, .center-form .login-button a, .accounts-dialog .login-button a, .accounts-centered-dialog .login-button a, .focal-btn a, .primary-btn a, .hollow-btn a, .special-btn a {
   line-height: 2;
   padding: 0.25rem;
 }
 
-/* line 50, ../sass/partials/typography/_type_components.scss */
+/* line 52, ../sass/partials/typography/_type_components.scss */
 .side-free-text {
   padding: auto 2rem auto 2rem;
 }
 
-/* line 55, ../sass/partials/typography/_type_components.scss */
+/* line 57, ../sass/partials/typography/_type_components.scss */
 h2.special-title, h2.special-title a {
   font-weight: 300;
   margin-bottom: 0px;
   line-height: 1;
 }
 
-/* line 61, ../sass/partials/typography/_type_components.scss */
+/* line 63, ../sass/partials/typography/_type_components.scss */
 h3.st-support, .st-support.article-title, h3.st-support a, .st-support.article-title a {
   font-weight: 300;
 }
 
-/* line 66, ../sass/partials/typography/_type_components.scss */
+/* line 68, ../sass/partials/typography/_type_components.scss */
 .special-text, .menu-icon-container::after {
   color: #3498db;
   text-transform: uppercase;
@@ -411,7 +424,7 @@ aside {
 }
 
 /* line 1, ../sass/partials/_buttons.scss */
-button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
+button, .accent-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
   cursor: pointer;
   border: 0px;
   color: #333;
@@ -428,16 +441,16 @@ button, .accent-btn, .focal-btn, .primary-btn, .hollow-btn, .special-btn {
   transition-duration: 0.6s;
 }
 /* line 5, ../sass/partials/_globals.scss */
-button:hover, .accent-btn:hover, .focal-btn:hover, .primary-btn:hover, .hollow-btn:hover, .special-btn:hover {
+button:hover, .accent-btn:hover, .center-form .login-button:hover, .accounts-dialog .login-button:hover, .accounts-centered-dialog .login-button:hover, .focal-btn:hover, .primary-btn:hover, .hollow-btn:hover, .special-btn:hover {
   background-color: #64c656;
 }
 /* line 10, ../sass/partials/_buttons.scss */
-button a, .accent-btn a, .focal-btn a, .primary-btn a, .hollow-btn a, .special-btn a {
+button a, .accent-btn a, .center-form .login-button a, .accounts-dialog .login-button a, .accounts-centered-dialog .login-button a, .focal-btn a, .primary-btn a, .hollow-btn a, .special-btn a {
   color: inherit;
 }
 
 /* line 15, ../sass/partials/_buttons.scss */
-.accent-btn {
+.accent-btn, .center-form .login-button, .accounts-dialog .login-button, .accounts-centered-dialog .login-button {
   background-color: #3498db;
   -moz-transition-property: background-color;
   -o-transition-property: background-color;
@@ -450,7 +463,7 @@ button a, .accent-btn a, .focal-btn a, .primary-btn a, .hollow-btn a, .special-b
   color: #fff;
 }
 /* line 5, ../sass/partials/_globals.scss */
-.accent-btn:hover {
+.accent-btn:hover, .center-form .login-button:hover, .accounts-dialog .login-button:hover, .accounts-centered-dialog .login-button:hover {
   background-color: #217dbb;
 }
 
@@ -599,7 +612,7 @@ body {
   margin-right: auto;
   padding: 1rem;
 }
-/* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -613,7 +626,7 @@ body {
   margin-right: auto;
   padding: 1rem;
 }
-/* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
 .large-container:after {
   content: " ";
   display: block;
@@ -641,7 +654,7 @@ body {
   margin-right: auto;
   margin-bottom: 3rem;
 }
-/* line 12, ../../../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
 .article-container:after {
   content: " ";
   display: block;
@@ -734,7 +747,7 @@ body {
   text-align: center;
 }
 /* line 30, ../sass/partials/_frontpage.scss */
-.button-list > button, .button-list > .accent-btn, .button-list > .focal-btn, .button-list > .primary-btn, .button-list > .hollow-btn, .button-list > .special-btn {
+.button-list > button, .button-list > .accent-btn, .center-form .button-list > .login-button, .accounts-dialog .button-list > .login-button, .accounts-centered-dialog .button-list > .login-button, .button-list > .focal-btn, .button-list > .primary-btn, .button-list > .hollow-btn, .button-list > .special-btn {
   margin: 1rem;
 }
 
@@ -877,7 +890,10 @@ body {
   margin-right: 0;
 }
 /* line 152, ../sass/partials/_frontpage.scss */
-.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text {
+.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .s-alert-error.s-alert-effect-genie,
+.blue-box .s-alert-success.s-alert-effect-genie,
+.blue-box .s-alert-info.s-alert-effect-genie,
+.blue-box .s-alert-warning.s-alert-effect-genie {
   text-align: center;
 }
 /* line 156, ../sass/partials/_frontpage.scss */
@@ -1067,4 +1083,160 @@ body {
   .coach-panel {
     width: 100%;
   }
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-width: 280x;
+  }
+  to {
+    opacity: 1;
+    max-width: 300px;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-width: 280px;
+  }
+  to {
+    opacity: 1;
+    max-width: 300px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-width: 280px;
+  }
+  to {
+    opacity: 1;
+    max-width: 300px;
+  }
+}
+/* line 7, ../sass/partials/_auth.scss */
+.center-form {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+/* line 22, ../sass/partials/_auth.scss */
+.input-text, .center-form input[type="text"], .center-form input[type="email"], .center-form input[type="password"], .accounts-dialog input[type="text"], .accounts-dialog input[type="email"], .accounts-dialog input[type="password"], .accounts-centered-dialog input[type="text"], .accounts-centered-dialog input[type="email"], .accounts-centered-dialog input[type="password"] {
+  display: block;
+  width: 100%;
+  line-height: 2rem;
+  height: 2rem;
+  border: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/* line 34, ../sass/partials/_auth.scss */
+.auth-wrapper {
+  background-image: url("/images/cover.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  display: table;
+  position: absolute;
+}
+
+/* line 44, ../sass/partials/_auth.scss */
+.center-form {
+  background: rgba(255, 255, 255, 0.7);
+  max-width: 20rem;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* line 59, ../sass/partials/_auth.scss */
+.accounts-dialog, .accounts-centered-dialog {
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 61, ../sass/partials/_auth.scss */
+.accounts-dialog *, .accounts-centered-dialog * {
+  font-family: "Ubuntu", sans-serif;
+}
+/* line 62, ../sass/partials/_auth.scss */
+.accounts-dialog .login-button, .accounts-centered-dialog .login-button {
+  text-transform: capitalize;
+}
+
+/* line 72, ../sass/partials/_auth.scss */
+.form-btn {
+  width: 100%;
+}
+
+/* line 76, ../sass/partials/_auth.scss */
+.form-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 81, ../sass/partials/_auth.scss */
+.form-heading {
+  width: 100%;
+  border-bottom: 1px solid #3498db;
+  margin-bottom: 1rem;
+}
+
+/* line 1, ../sass/partials/_notifications.scss */
+.s-alert-error.s-alert-effect-genie,
+.s-alert-success.s-alert-effect-genie,
+.s-alert-info.s-alert-effect-genie,
+.s-alert-warning.s-alert-effect-genie {
+  border-radius: 500px;
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 12, ../sass/partials/_notifications.scss */
+.s-alert-close {
+  top: -10px;
+  right: -10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+/* line 19, ../sass/partials/_notifications.scss */
+.s-alert-error.s-alert-effect-genie {
+  background-color: rgba(192, 57, 43, 0.7);
+}
+
+/* line 23, ../sass/partials/_notifications.scss */
+.s-alert-success.s-alert-effect-genie {
+  background-color: rgba(135, 211, 124, 0.7);
+}
+
+/* line 27, ../sass/partials/_notifications.scss */
+.s-alert-info.s-alert-effect-genie {
+  background-color: rgba(52, 152, 219, 0.7);
+}
+
+/* line 31, ../sass/partials/_notifications.scss */
+.s-alert-warning.s-alert-effect-genie {
+  background-color: rgba(252, 205, 75, 0.7);
+}
+
+/* line 1, ../sass/partials/_dashboard.scss */
+.dense-polythene {
+  background-image: linear-gradient(#ffffff, rgba(255, 255, 255, 0.3));
+  height: 100%;
 }
