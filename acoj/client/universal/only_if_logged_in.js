@@ -12,6 +12,6 @@ Template.onlyIfLoggedOut.helpers({
     return !Meteor.user();
   },
   deauthInProcess: function() {
-    return Meteor.loggingOut();
+    return false;
   }
 });

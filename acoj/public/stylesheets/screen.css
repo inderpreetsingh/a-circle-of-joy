@@ -151,6 +151,12 @@ a {
   height: 100%;
 }
 
+/* line 57, ../sass/partials/_globals.scss */
+.cover-bg, .picture, .cover-image {
+  background-size: cover;
+  background-position: center center;
+}
+
 /* line 1, ../sass/partials/typography/_type_scale.scss */
 .small-text, .s-alert-error.s-alert-effect-genie,
 .s-alert-success.s-alert-effect-genie,
@@ -213,7 +219,7 @@ h4, .post-content h1, .post-content h2, .post-content h3, .post-content .article
 }
 
 /* line 9, ../sass/partials/typography/_type_colors.scss */
-.snow-white-txt, .snow-white-txt a {
+.snow-white-txt, .dash-heading, .snow-white-txt a, .dash-heading a {
   color: #fafafa;
 }
 
@@ -1085,7 +1091,57 @@ body {
   }
 }
 
+/* line 1, ../sass/partials/dashboard/_common.scss */
+#__blaze-root {
+  height: 100%;
+}
+
+/* line 5, ../sass/partials/dashboard/_common.scss */
+.dense-wrapper {
+  min-height: 100%;
+  background: url("/images/sos.png");
+}
+/* line 8, ../sass/partials/dashboard/_common.scss */
+.dense-wrapper .polythene {
+  overflow: auto;
+}
+
+/* line 11, ../sass/partials/dashboard/_common.scss */
+.paper {
+  margin-left: 5rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 5px;
+}
+
+/* line 17, ../sass/partials/dashboard/_common.scss */
+.padded {
+  padding: 1rem;
+}
+
+/* line 19, ../sass/partials/dashboard/_common.scss */
+.sidebar-container {
+  height: 100%;
+  background: #333;
+  width: 5rem;
+  position: fixed;
+  left: 0;
+}
+
+/* line 27, ../sass/partials/dashboard/_common.scss */
+.stack {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.stack:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 /* make keyframes that tell the start state and the end state of our object */
+/** TODO: Convert them into compass keyframes, and use a separate file for animations **/
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -1116,7 +1172,7 @@ body {
     max-width: 300px;
   }
 }
-/* line 7, ../sass/partials/_auth.scss */
+/* line 7, ../sass/partials/dashboard/_auth.scss */
 .center-form {
   opacity: 0;
   /* make things invisible upon start */
@@ -1133,7 +1189,7 @@ body {
   animation-duration: 0.5s;
 }
 
-/* line 22, ../sass/partials/_auth.scss */
+/* line 22, ../sass/partials/dashboard/_auth.scss */
 .input-text, .center-form input[type="text"], .center-form input[type="email"], .center-form input[type="password"], .accounts-dialog input[type="text"], .accounts-dialog input[type="email"], .accounts-dialog input[type="password"], .accounts-centered-dialog input[type="text"], .accounts-centered-dialog input[type="email"], .accounts-centered-dialog input[type="password"] {
   display: block;
   width: 100%;
@@ -1146,7 +1202,7 @@ body {
   border-radius: 5px;
 }
 
-/* line 34, ../sass/partials/_auth.scss */
+/* line 34, ../sass/partials/dashboard/_auth.scss */
 .auth-wrapper {
   background-image: url("/images/cover.jpg");
   background-size: cover;
@@ -1157,7 +1213,7 @@ body {
   position: absolute;
 }
 
-/* line 44, ../sass/partials/_auth.scss */
+/* line 44, ../sass/partials/dashboard/_auth.scss */
 .center-form {
   background: rgba(255, 255, 255, 0.7);
   max-width: 20rem;
@@ -1166,38 +1222,159 @@ body {
   border-radius: 5px;
 }
 
-/* line 59, ../sass/partials/_auth.scss */
+/* line 59, ../sass/partials/dashboard/_auth.scss */
 .accounts-dialog, .accounts-centered-dialog {
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 61, ../sass/partials/_auth.scss */
+/* line 61, ../sass/partials/dashboard/_auth.scss */
 .accounts-dialog *, .accounts-centered-dialog * {
   font-family: "Ubuntu", sans-serif;
 }
-/* line 62, ../sass/partials/_auth.scss */
+/* line 62, ../sass/partials/dashboard/_auth.scss */
 .accounts-dialog .login-button, .accounts-centered-dialog .login-button {
   text-transform: capitalize;
 }
 
-/* line 72, ../sass/partials/_auth.scss */
+/* line 72, ../sass/partials/dashboard/_auth.scss */
 .form-btn {
   width: 100%;
 }
 
-/* line 76, ../sass/partials/_auth.scss */
+/* line 76, ../sass/partials/dashboard/_auth.scss */
 .form-container {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 81, ../sass/partials/_auth.scss */
+/* line 81, ../sass/partials/dashboard/_auth.scss */
 .form-heading {
   width: 100%;
   border-bottom: 1px solid #3498db;
   margin-bottom: 1rem;
 }
 
-/* line 1, ../sass/partials/_notifications.scss */
+/*****************************
+** P R O F I L E
+*****************************/
+/** 1. Profile picture at top **/
+/* line 6, ../sass/partials/dashboard/_profile.scss */
+.picture {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+  margin-bottom: -5rem;
+  position: relative;
+  z-index: 200;
+  background: url("/images/pic-default.jpg");
+  border-radius: 50%;
+}
+
+/** 2. The white background card area **/
+/* line 19, ../sass/partials/dashboard/_profile.scss */
+.dash-panel {
+  background: #fff;
+  border-radius: 5px;
+}
+/* line 22, ../sass/partials/dashboard/_profile.scss */
+.dash-panel .title-bar {
+  text-align: center;
+}
+
+/** 3. The cover image **/
+/** 3.1 Cover image background and overlay **/
+/* line 27, ../sass/partials/dashboard/_profile.scss */
+.cover-image {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 14rem;
+  background: url("/images/profile-default.jpg");
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 2px solid #3498db;
+}
+
+/* line 37, ../sass/partials/dashboard/_profile.scss */
+.darken {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/** 3.2 Title and status inside cover image **/
+/* line 45, ../sass/partials/dashboard/_profile.scss */
+.dash-heading {
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding-top: 5.5rem;
+  text-align: center;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/** 4. The about me part **/
+/* line 56, ../sass/partials/dashboard/_profile.scss */
+.bio {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+}
+
+/** 5. Profile Footer **/
+/* line 63, ../sass/partials/dashboard/_profile.scss */
+.profile-footer {
+  background-size: cover;
+  background-position: center center;
+  background: #ccc;
+  border-radius: 0px 0px 5px 5px;
+  padding: 1rem 0px;
+}
+/* line 70, ../sass/partials/dashboard/_profile.scss */
+.profile-footer .footer-icon {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fafafa;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/** Common styles for footer panels **/
+/* line 80, ../sass/partials/dashboard/_profile.scss */
+.quad-panel {
+  box-sizing: border-box;
+  padding-left: 1rem;
+  min-height: 2rem;
+  width: 21.05263%;
+  float: left;
+  margin-right: 5.26316%;
+}
+@media (max-width: 699px) {
+  /* line 80, ../sass/partials/dashboard/_profile.scss */
+  .quad-panel {
+    width: 47.36842%;
+    float: left;
+    margin-right: 5.26316%;
+  }
+}
+
+/** 5.4 Panel 4 **/
+/* line 91, ../sass/partials/dashboard/_profile.scss */
+.quad-last-panel {
+  width: 21.05263%;
+  float: right;
+  margin-right: 0;
+}
+
+/** 5.2, 5.4 Panel 2 & 4 **/
+@media (max-width: 699px) {
+  /* line 96, ../sass/partials/dashboard/_profile.scss */
+  .quad-last-panel, .quad-mid-panel {
+    width: 47.36842%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 1, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-error.s-alert-effect-genie,
 .s-alert-success.s-alert-effect-genie,
 .s-alert-info.s-alert-effect-genie,
@@ -1207,7 +1384,7 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 12, ../sass/partials/_notifications.scss */
+/* line 12, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-close {
   top: -10px;
   right: -10px;
@@ -1215,28 +1392,22 @@ body {
   border-radius: 50%;
 }
 
-/* line 19, ../sass/partials/_notifications.scss */
+/* line 19, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-error.s-alert-effect-genie {
   background-color: rgba(192, 57, 43, 0.7);
 }
 
-/* line 23, ../sass/partials/_notifications.scss */
+/* line 23, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-success.s-alert-effect-genie {
   background-color: rgba(135, 211, 124, 0.7);
 }
 
-/* line 27, ../sass/partials/_notifications.scss */
+/* line 27, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-info.s-alert-effect-genie {
   background-color: rgba(52, 152, 219, 0.7);
 }
 
-/* line 31, ../sass/partials/_notifications.scss */
+/* line 31, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-warning.s-alert-effect-genie {
   background-color: rgba(252, 205, 75, 0.7);
-}
-
-/* line 1, ../sass/partials/_dashboard.scss */
-.dense-polythene {
-  background-image: linear-gradient(#ffffff, rgba(255, 255, 255, 0.3));
-  height: 100%;
 }

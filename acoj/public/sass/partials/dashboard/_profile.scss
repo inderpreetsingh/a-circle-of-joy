@@ -1,0 +1,100 @@
+/*****************************
+** P R O F I L E
+*****************************/
+
+/** 1. Profile picture at top **/
+.picture {
+  @extend .cover-bg;
+  width:10rem;
+  height:10rem;
+  margin:auto;
+  margin-bottom: -5rem;
+  position: relative;
+  z-index:200;
+  background:url('/images/pic-default.jpg');
+  border-radius:50%;
+}
+
+/** 2. The white background card area **/
+.dash-panel {
+  background: $dead-white;
+  border-radius: $mini-gutter;
+  .title-bar { text-align:center; }
+}
+
+/** 3. The cover image **/
+/** 3.1 Cover image background and overlay **/
+.cover-image {
+  @extend .cover-bg;
+  position: relative;
+  z-index: 100;
+  width:100%;
+  height:14rem;
+  background:url('/images/profile-default.jpg');
+  border-radius: $mini-gutter $mini-gutter 0px 0px;
+  border-bottom: 2px solid $accent ;
+}
+.darken {
+  width:100%;
+  height:100%;
+  border-radius: inherit;
+  background: rgba($dead-black, 0.3);
+}
+
+/** 3.2 Title and status inside cover image **/
+.dash-heading {
+  @extend .snow-white-txt;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding-top: 5.5rem;
+  text-align: center;
+  text-shadow: 1px 2px rgba($dead-black,0.1);
+}
+
+/** 4. The about me part **/
+.bio {
+  text-align: center;
+  max-width: 30rem;
+  margin:auto;
+}
+
+/** 5. Profile Footer **/
+.profile-footer {
+  background-size:cover;
+  background-position: center center;
+  background: $grey-joy;
+  border-radius: 0px 0px $mini-gutter $mini-gutter;
+  padding:1rem 0px;
+
+  .footer-icon {
+    background: rgba($dead-black, 0.6);
+    color: $snow-white;
+    border-radius: 50%;
+    padding:$mini-gutter;
+  }
+
+}
+
+/** Common styles for footer panels **/
+.quad-panel {
+  box-sizing: border-box;
+  padding-left: 1rem;
+  min-height: 2rem;
+  @include span(1 of 4);
+  @include media("<700px") {
+    @include span(2 of 4);
+  }
+}
+
+/** 5.4 Panel 4 **/
+.quad-last-panel {
+  @include span(last 1 of 4);
+}
+
+/** 5.2, 5.4 Panel 2 & 4 **/
+.quad-last-panel, .quad-mid-panel {
+  @include media("<700px") {
+    @include span(last 2 of 4);
+  }
+}

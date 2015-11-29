@@ -3,5 +3,6 @@ Template.logOut.events({
     event.preventDefault();
 
     Meteor.logout();
+    sAlert.success("You have successfully logged out");
   }
 });

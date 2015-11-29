@@ -15,7 +15,8 @@ Template.signUp.events({
           sAlert.error(error.reason);
         } else {
           sAlert.success("Your account has been created!");
-          sAlert.info("An email has been sent to your inbox. Verify your email address to continue.")
+          sAlert.info("An email has been sent to your inbox. Verify your email address to continue.", {timeout: 'none'})
+          FlowRouter.go("/dashboard");
         }
       });
     }

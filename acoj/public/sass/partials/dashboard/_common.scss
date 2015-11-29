@@ -1,0 +1,29 @@
+#__blaze-root {
+  height:100%;
+}
+
+.dense-wrapper {
+  min-height:100%;
+  background: url('/images/sos.png');
+  .polythene { overflow:auto; }
+}
+
+.paper {
+  margin-left:5rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: $mini-gutter;
+}
+
+.padded { padding: 1rem;}
+
+.sidebar-container {
+  height:100%;
+  background: $king-black;
+  width:5rem;
+  position:fixed;
+  left:0;
+}
+
+.stack {
+  @include container(60rem);
+}

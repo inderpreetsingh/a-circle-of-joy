@@ -1,0 +1,17 @@
+<template name="dashboard">
+  {{#onlyIfLoggedIn}}
+  <div class="dense-wrapper">
+    {{> sidebar}}
+      <div class ="stack">
+          {{> logOut }}
+        {{> profile}}
+      </div>
+  </div>
+  {{/onlyIfLoggedIn}}
+</template>
+
+<template name="dashboardContent">
+  <div class="dense-polythene">
+    {> logOut }
+  </div>
+</template>

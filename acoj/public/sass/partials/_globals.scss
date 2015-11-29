@@ -53,3 +53,8 @@ a {
     @include background-image(linear-gradient($dead-white, rgba(255,255,255,0)));
     height:100%;
 }
+
+.cover-bg {
+  background-size:cover;
+  background-position: center center;
+}

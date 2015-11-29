@@ -1,0 +1,73 @@
+<template name="profile">
+  <div class = "paper">
+    {{# onlyIfLoggedIn }}
+      {{> profileCard}}
+    {{/ onlyIfLoggedIn}}
+  </div>
+</template>
+
+<template name="profileEditForm">
+
+</template>
+
+<Template name="profileCard">
+  <!-- 1. Profile picture at top -->
+  <div class="picture"></div>
+
+  <!-- 2. The white background card area -->
+  <div class="dash-panel profile-panel">
+
+    <!-- 3. The cover image -->
+    <!-- 3.1 Cover image background and overlay -->
+    <div class="cover-image">
+      <div class="darken">
+        <!-- 3.2 Title and status inside cover image -->
+        <h3 class="dash-heading">{{ thisProfile.name }}</h3>
+        <p class="snow-white-txt content-font"><em> {{ thisProfile.status }} </em> </p>
+      </div>
+    </div>
+    <!-- /3 -->
+
+    <!-- 4. The About me part with serif text -->
+    <div class="inside-paper padded">
+      <p class="bio content-font">
+        {{ thisProfile.bio }}
+      </p>
+    </div>
+    <!-- /4 -->
+
+    <!-- 5. Profile footer -->
+    <div class="profile-footer">
+      <!-- 5.1 First panel -->
+      <div class="quad-panel">
+        <i class="footer-icon ti-location-pin"></i>
+        From: {{thisProfile.country}}
+      </div>
+
+      <!-- 5.2 Second panel -->
+      <div class="quad-panel quad-mid-panel">
+        <i class="ti-email footer-icon"></i>
+        Email: {{thisProfile.email}}
+      </div>
+
+      <!-- 5.3 Third panel -->
+      <div class="quad-panel">
+        <i class="ti-gift footer-icon"></i>
+        Birthday:
+        {{showDate thisProfile.birthday 'day'}}
+        {{showDate thisProfile.birthday 'month'}}
+      </div>
+
+      <!-- 5.4 Fourth panel -->
+      <div class="quad-panel quad-last-panel">
+        <i class="ti-heart footer-icon"></i>
+        Member Since:
+        {{showDate thisProfile.createdAt 'year'}}
+      </div>
+
+    </div>
+    <!-- /5 -->
+
+  </div>
+  <!-- /2 -->
+</template>
