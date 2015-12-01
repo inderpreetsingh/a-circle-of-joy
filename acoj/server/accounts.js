@@ -11,7 +11,6 @@ Meteor.startup(function () {
   }
 
   Accounts.onCreateUser(function(options, user) {
-console.log(user);
     pro = Profiles.insert({
       user_id: user._id,
       createdAt: new Date(),

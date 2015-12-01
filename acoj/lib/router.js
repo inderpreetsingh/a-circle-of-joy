@@ -1,6 +1,6 @@
 FlowRouter.route('/', {
   action: function (params, queryParams) {
-    BlazeLayout.render('layout', { main: 'dashboard' , auth: 'login' });
+    FlowRouter.go("/dashboard/profile");
   },
   name: 'home'
 });

@@ -14,12 +14,12 @@ Template.login.events({
           sAlert.error(error.reason, {position:'top-right', timeout: 5000});
         } else {
           sAlert.success("You have successfully logged In")
-          FlowRouter.go('/dashboard');
+          FlowRouter.go('/dashboard/profile');
         }
       });
     }
 
     return false;
-    
+
   }
 });

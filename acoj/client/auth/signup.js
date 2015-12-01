@@ -1,6 +1,7 @@
 Template.signUp.events({
   'submit form': function(e,t){
     event.preventDefault();
+    $('')
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
     var username = $('[name=password]').val();
@@ -19,7 +20,7 @@ Template.signUp.events({
         } else {
           sAlert.success("Your account has been created!");
           sAlert.info("An email has been sent to your inbox. Verify your email address to continue.", {timeout: 'none'})
-          FlowRouter.go("/dashboard");
+          FlowRouter.go("/dashboard/profile/edit");
         }
       });
     }

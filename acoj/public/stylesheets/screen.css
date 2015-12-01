@@ -158,10 +158,10 @@ a {
 }
 
 /* line 1, ../sass/partials/typography/_type_scale.scss */
-.small-text, .s-alert-error.s-alert-effect-genie,
+.small-text, .error, .profile-footer, .s-alert-error.s-alert-effect-genie,
 .s-alert-success.s-alert-effect-genie,
 .s-alert-info.s-alert-effect-genie,
-.s-alert-warning.s-alert-effect-genie, .small-text a, .s-alert-error.s-alert-effect-genie a,
+.s-alert-warning.s-alert-effect-genie, .small-text a, .error a, .profile-footer a, .s-alert-error.s-alert-effect-genie a,
 .s-alert-success.s-alert-effect-genie a,
 .s-alert-info.s-alert-effect-genie a,
 .s-alert-warning.s-alert-effect-genie a {
@@ -219,7 +219,7 @@ h4, .post-content h1, .post-content h2, .post-content h3, .post-content .article
 }
 
 /* line 9, ../sass/partials/typography/_type_colors.scss */
-.snow-white-txt, .dash-heading, .snow-white-txt a, .dash-heading a {
+.snow-white-txt, .profile-heading, .dash-heading, .dash-heading input, .snow-white-txt a, .profile-heading a, .dash-heading a {
   color: #fafafa;
 }
 
@@ -896,7 +896,7 @@ body {
   margin-right: 0;
 }
 /* line 152, ../sass/partials/_frontpage.scss */
-.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .s-alert-error.s-alert-effect-genie,
+.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .error, .blue-box .profile-footer, .blue-box .s-alert-error.s-alert-effect-genie,
 .blue-box .s-alert-success.s-alert-effect-genie,
 .blue-box .s-alert-info.s-alert-effect-genie,
 .blue-box .s-alert-warning.s-alert-effect-genie {
@@ -1140,6 +1140,18 @@ body {
   clear: both;
 }
 
+/* line 31, ../sass/partials/dashboard/_common.scss */
+.ghost-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0px;
+  border-radius: 5px;
+  text-align: inherit;
+}
+/* line 36, ../sass/partials/dashboard/_common.scss */
+.ghost-input:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 /* make keyframes that tell the start state and the end state of our object */
 /** TODO: Convert them into compass keyframes, and use a separate file for animations **/
 @-webkit-keyframes fadeIn {
@@ -1265,7 +1277,7 @@ body {
   margin-bottom: -5rem;
   position: relative;
   z-index: 200;
-  background: url("/images/pic-default.jpg");
+  background-image: url("/images/pic-default.jpg");
   border-radius: 50%;
 }
 
@@ -1274,9 +1286,6 @@ body {
 .dash-panel {
   background: #fff;
   border-radius: 5px;
-}
-/* line 22, ../sass/partials/dashboard/_profile.scss */
-.dash-panel .title-bar {
   text-align: center;
 }
 
@@ -1288,12 +1297,13 @@ body {
   z-index: 100;
   width: 100%;
   height: 14rem;
-  background: url("/images/profile-default.jpg");
+  text-align: center;
+  background-image: url("/images/profile-default.jpg");
   border-radius: 5px 5px 0px 0px;
   border-bottom: 2px solid #3498db;
 }
 
-/* line 37, ../sass/partials/dashboard/_profile.scss */
+/* line 38, ../sass/partials/dashboard/_profile.scss */
 .darken {
   width: 100%;
   height: 100%;
@@ -1302,43 +1312,69 @@ body {
 }
 
 /** 3.2 Title and status inside cover image **/
-/* line 45, ../sass/partials/dashboard/_profile.scss */
-.dash-heading {
+/* line 46, ../sass/partials/dashboard/_profile.scss */
+.profile-heading, .dash-heading, .dash-heading input {
   font-weight: 300;
+  max-width: 100%;
   font-size: 2rem;
   text-transform: capitalize;
-  padding-top: 5.5rem;
   text-align: center;
   text-shadow: 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/** 4. The about me part **/
 /* line 56, ../sass/partials/dashboard/_profile.scss */
+.dash-heading {
+  padding-top: 5.5rem;
+}
+
+/** 4. The about me part **/
+/* line 66, ../sass/partials/dashboard/_profile.scss */
 .bio {
-  text-align: center;
+  width: 100%;
   max-width: 30rem;
+  min-height: 14rem;
   margin: auto;
+  display: block;
+  font-size: 1rem;
+}
+
+/* line 75, ../sass/partials/dashboard/_profile.scss */
+textarea.bio {
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
 }
 
 /** 5. Profile Footer **/
-/* line 63, ../sass/partials/dashboard/_profile.scss */
+/* line 81, ../sass/partials/dashboard/_profile.scss */
 .profile-footer {
-  background-size: cover;
-  background-position: center center;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background: #ccc;
   border-radius: 0px 0px 5px 5px;
   padding: 1rem 0px;
 }
-/* line 70, ../sass/partials/dashboard/_profile.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+.profile-footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 87, ../sass/partials/dashboard/_profile.scss */
 .profile-footer .footer-icon {
   background: rgba(0, 0, 0, 0.6);
   color: #fafafa;
   border-radius: 50%;
   padding: 5px;
 }
+/* line 93, ../sass/partials/dashboard/_profile.scss */
+.profile-footer input {
+  border: 1px solid #666;
+}
 
 /** Common styles for footer panels **/
-/* line 80, ../sass/partials/dashboard/_profile.scss */
+/* line 99, ../sass/partials/dashboard/_profile.scss */
 .quad-panel {
   box-sizing: border-box;
   padding-left: 1rem;
@@ -1348,7 +1384,7 @@ body {
   margin-right: 5.26316%;
 }
 @media (max-width: 699px) {
-  /* line 80, ../sass/partials/dashboard/_profile.scss */
+  /* line 99, ../sass/partials/dashboard/_profile.scss */
   .quad-panel {
     width: 47.36842%;
     float: left;
@@ -1357,7 +1393,7 @@ body {
 }
 
 /** 5.4 Panel 4 **/
-/* line 91, ../sass/partials/dashboard/_profile.scss */
+/* line 110, ../sass/partials/dashboard/_profile.scss */
 .quad-last-panel {
   width: 21.05263%;
   float: right;
@@ -1366,7 +1402,7 @@ body {
 
 /** 5.2, 5.4 Panel 2 & 4 **/
 @media (max-width: 699px) {
-  /* line 96, ../sass/partials/dashboard/_profile.scss */
+  /* line 115, ../sass/partials/dashboard/_profile.scss */
   .quad-last-panel, .quad-mid-panel {
     width: 47.36842%;
     float: right;
