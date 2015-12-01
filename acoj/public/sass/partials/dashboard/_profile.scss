@@ -11,7 +11,7 @@
   margin-bottom: -5rem;
   position: relative;
   z-index:200;
-  background:url('/images/pic-default.jpg');
+  background-image:url('/images/pic-default.jpg');
   border-radius:50%;
 }
 
@@ -19,7 +19,7 @@
 .dash-panel {
   background: $dead-white;
   border-radius: $mini-gutter;
-  .title-bar { text-align:center; }
+  text-align: center;
 }
 
 /** 3. The cover image **/
@@ -30,7 +30,8 @@
   z-index: 100;
   width:100%;
   height:14rem;
-  background:url('/images/profile-default.jpg');
+  text-align: center;
+  background-image:url('/images/profile-default.jpg');
   border-radius: $mini-gutter $mini-gutter 0px 0px;
   border-bottom: 2px solid $accent ;
 }
@@ -42,38 +43,56 @@
 }
 
 /** 3.2 Title and status inside cover image **/
-.dash-heading {
+.profile-heading {
   @extend .snow-white-txt;
   font-weight: 300;
+  max-width:100%;
   font-size: 2rem;
   text-transform: capitalize;
-  padding-top: 5.5rem;
   text-align: center;
   text-shadow: 1px 2px rgba($dead-black,0.1);
 }
 
-/** 4. The about me part **/
-.bio {
-  text-align: center;
-  max-width: 30rem;
-  margin:auto;
+.dash-heading {
+  @extend .profile-heading;
+  padding-top:5.5rem;
 }
 
+.dash-heading input {
+  @extend .profile-heading;
+}
+
+/** 4. The about me part **/
+.bio {
+  width:100%;
+  max-width: 30rem;
+  min-height: 14rem;
+  margin:auto;
+  display:block;
+  font-size: 1rem;
+}
+
+textarea.bio {
+  border:1px solid $grey-joy;
+  text-align:center;
+  border-radius: $mini-gutter;
+}
 /** 5. Profile Footer **/
 .profile-footer {
-  background-size:cover;
-  background-position: center center;
+  @include container();
+  @extend .small-text;
   background: $grey-joy;
   border-radius: 0px 0px $mini-gutter $mini-gutter;
   padding:1rem 0px;
-
   .footer-icon {
     background: rgba($dead-black, 0.6);
     color: $snow-white;
     border-radius: 50%;
     padding:$mini-gutter;
   }
-
+  input {
+    border: 1px solid $horse-black;
+  }
 }
 
 /** Common styles for footer panels **/

@@ -6,13 +6,6 @@ Template.registerHelper('currentUser',function() {
   return currentUser;
 });
 
-Template.registerHelper('Profile',function() {
-  console.log(currentUser);
-  p = Profiles.findOne({user_id: currentUser});
-  console.log(p);
-  return p;
-})
-
 Template.registerHelper('showDate', function (date, part){
   console.log(date);
   console.log(part);
@@ -23,4 +16,14 @@ Template.registerHelper('showDate', function (date, part){
   } else if (part == 'day') {
     return moment(date).format('Do');
   }
-})
+});
+
+Template.registerHelper ('thisProfile', function(){
+  thisProfileObj = Profiles.findOne({user_id: Meteor.userId()});
+  console.log(thisProfileObj);
+  return thisProfileObj;
+});
+
+Template.registerHelper('loggedIn', function() {
+    return !!Meteor.user();
+});

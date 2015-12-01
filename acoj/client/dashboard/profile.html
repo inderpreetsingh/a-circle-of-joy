@@ -1,13 +1,69 @@
-<template name="profile">
-  <div class = "paper">
-    {{# onlyIfLoggedIn }}
-      {{> profileCard}}
-    {{/ onlyIfLoggedIn}}
+<template name="profileEditCard">
+  <!-- Contents from template profileCard -->
+  <!-- 1 -->
+  <div class="picture"></div>
+
+  <!-- 2 -->
+  <div class="dash-panel profile-panel">
+    {{#autoForm collection="Profiles" id="updateProfileForm" doc=thisProfile autosave=true type="update"}}
+    <!--3 -->
+    <!-- 3.1 -->
+    <div class="cover-image">
+      <div class="darken">
+        <!-- 3.2 -->
+
+        <h3 class="dash-heading "> {{> afFieldInput name="name" class="ghost-input" }} </h3>
+        <p class="error">   {{#if afFieldIsInvalid name='name'}} Invalid name   {{/if}} </p>
+        <p><em>{{> afFieldInput name="status" class=" ghost-input snow-white-txt content-font" }} </em> </p>
+        <p class="error">   {{#if afFieldIsInvalid name='status'}} Invalid status  {{/if}} </p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="inside-paper padded">
+      <h4 class="content-font"> <em> Bio </em> </h4>
+      <p class="error">   {{#if afFieldIsInvalid name='bio'}} Invalid entry in bio  {{/if}} </p>
+      {{> afFieldInput name="bio" type="textarea" class=" bio content-font " }}
+      <p class="error">{{#if afFieldIsInvalid name='location'}} Invalid entry in location {{/if}} </p>
+      {{> afFieldInput name="location" }}
+    </div>
+    <!-- /4 -->
+
+    <!-- 5. Profile footer -->
+    <div class="profile-footer">
+      <!-- 5.1 First panel -->
+      <div class="quad-panel">
+        <i class="footer-icon ti-location-pin"></i>
+        <p> Country: </p>
+        <p class="error">   {{#if afFieldIsInvalid name='country'}} Name should have at-least 5 letters  {{/if}} </p>
+        {{> afFieldInput name="country" type="select" options="allowed"}}
+      </div>
+
+      <!-- 5.2 Second panel -->
+      <div class="quad-panel quad-mid-panel">
+        <i class="ti-email footer-icon"></i>
+        {{thisProfile.email}}
+      </div>
+
+      <!-- 5.3 Third panel -->
+      <div class="quad-panel">
+        <i class="ti-gift footer-icon"></i>
+        <p>Born:</p>
+        <p class="error">{{#if afFieldIsInvalid name='birthday'}} Invalid entry in birth date {{/if}} </p>
+        {{> afFieldInput name="birthday"  class="ghost-input"}}
+      </div>
+
+      <!-- 5.4 Fourth panel -->
+      <div class="quad-panel quad-last-panel">
+        <i class="ti-heart footer-icon"></i>
+        Member Since:
+        {{showDate thisProfile.createdAt 'year'}}
+      </div>
+    </div>
+    <!-- /5 -->
+
+    {{/autoForm}}
   </div>
-</template>
-
-<template name="profileEditForm">
-
 </template>
 
 <Template name="profileCard">
@@ -41,19 +97,19 @@
       <!-- 5.1 First panel -->
       <div class="quad-panel">
         <i class="footer-icon ti-location-pin"></i>
-        From: {{thisProfile.country}}
+        {{thisProfile.country}}
       </div>
 
       <!-- 5.2 Second panel -->
       <div class="quad-panel quad-mid-panel">
         <i class="ti-email footer-icon"></i>
-        Email: {{thisProfile.email}}
+        {{thisProfile.email}}
       </div>
 
       <!-- 5.3 Third panel -->
       <div class="quad-panel">
         <i class="ti-gift footer-icon"></i>
-        Birthday:
+        Born:
         {{showDate thisProfile.birthday 'day'}}
         {{showDate thisProfile.birthday 'month'}}
       </div>

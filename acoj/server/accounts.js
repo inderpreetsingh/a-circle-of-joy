@@ -11,10 +11,12 @@ Meteor.startup(function () {
   }
 
   Accounts.onCreateUser(function(options, user) {
+console.log(user);
     pro = Profiles.insert({
       user_id: user._id,
       createdAt: new Date(),
-      email: user.email
+      email: user.emails[0].address,
+      name: user.username
     });
     console.log(pro);
     if (user._id == 1 ) {

@@ -3,13 +3,16 @@ Template.signUp.events({
     event.preventDefault();
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
+    var username = $('[name=password]').val();
     if (isNotEmpty(email) &&
     isEmail(email) &&
+    isNotEmpty(username) &&
     isNotEmpty(password) &&
     isValidPassword(password)) {
       Accounts.createUser({
         email: email,
-        password: password
+        password: password,
+        username: username
       }, function (error) {
         if (error) {
           sAlert.error(error.reason);

@@ -27,7 +27,9 @@ Schemas.UserProfile = new SimpleSchema({
  },
   name: {
     type: String,
-    optional: true
+    optional:true,
+    min: 5,
+    max: 30
   },
   status: {
     type: String,
@@ -41,6 +43,7 @@ Schemas.UserProfile = new SimpleSchema({
   bio: {
     type: String,
     optional: true,
+    defaultValue: "This is the place where you can write about yourself, your experiences... ",
     autoform: {
       rows: 4
     }

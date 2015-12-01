@@ -27,3 +27,16 @@
 .stack {
   @include container(60rem);
 }
+
+.ghost-input {
+  background:rgba($dead-white, 0.1);
+  border: 0px;
+  border-radius: $mini-gutter;
+  text-align: inherit;
+  &:hover {
+    box-shadow: 1px 1px 3px rgba($dead-black, 0.3);
+  }
+}
+.error{
+  @extend .small-text;
+}
