@@ -4,7 +4,7 @@ Template.signUp.events({
     $('')
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
-    var username = $('[name=password]').val();
+    var username = $('[name=usernam]').val();
     if (isNotEmpty(email) &&
     isEmail(email) &&
     isNotEmpty(username) &&
