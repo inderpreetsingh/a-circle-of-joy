@@ -158,10 +158,10 @@ a {
 }
 
 /* line 1, ../sass/partials/typography/_type_scale.scss */
-.small-text, .error, .profile-footer, .s-alert-error.s-alert-effect-genie,
+.small-text, .error, .sidebar-item .sidebar-label, .profile-footer, .s-alert-error.s-alert-effect-genie,
 .s-alert-success.s-alert-effect-genie,
 .s-alert-info.s-alert-effect-genie,
-.s-alert-warning.s-alert-effect-genie, .small-text a, .error a, .profile-footer a, .s-alert-error.s-alert-effect-genie a,
+.s-alert-warning.s-alert-effect-genie, .small-text a, .error a, .sidebar-item .sidebar-label a, .profile-footer a, .s-alert-error.s-alert-effect-genie a,
 .s-alert-success.s-alert-effect-genie a,
 .s-alert-info.s-alert-effect-genie a,
 .s-alert-warning.s-alert-effect-genie a {
@@ -944,7 +944,7 @@ body {
   margin-right: 0;
 }
 /* line 152, ../sass/partials/_frontpage.scss */
-.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .error, .blue-box .profile-footer, .blue-box .s-alert-error.s-alert-effect-genie,
+.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .error, .blue-box .sidebar-item .sidebar-label, .sidebar-item .blue-box .sidebar-label, .blue-box .profile-footer, .blue-box .s-alert-error.s-alert-effect-genie,
 .blue-box .s-alert-success.s-alert-effect-genie,
 .blue-box .s-alert-info.s-alert-effect-genie,
 .blue-box .s-alert-warning.s-alert-effect-genie {
@@ -1147,26 +1147,27 @@ body {
 /* line 5, ../sass/partials/dashboard/_common.scss */
 .dense-wrapper {
   min-height: 100%;
-  background: url("/images/sos.png");
+  background-image: url("/images/sos.png");
+  background-attachment: fixed;
 }
-/* line 8, ../sass/partials/dashboard/_common.scss */
+/* line 9, ../sass/partials/dashboard/_common.scss */
 .dense-wrapper .polythene {
   overflow: auto;
 }
 
-/* line 11, ../sass/partials/dashboard/_common.scss */
+/* line 12, ../sass/partials/dashboard/_common.scss */
 .paper {
   margin-left: 5rem;
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 5px;
 }
 
-/* line 17, ../sass/partials/dashboard/_common.scss */
+/* line 18, ../sass/partials/dashboard/_common.scss */
 .padded {
   padding: 1rem;
 }
 
-/* line 19, ../sass/partials/dashboard/_common.scss */
+/* line 20, ../sass/partials/dashboard/_common.scss */
 .sidebar-container {
   height: 100%;
   background: #333;
@@ -1175,7 +1176,7 @@ body {
   left: 0;
 }
 
-/* line 27, ../sass/partials/dashboard/_common.scss */
+/* line 28, ../sass/partials/dashboard/_common.scss */
 .stack {
   max-width: 60rem;
   margin-left: auto;
@@ -1188,16 +1189,66 @@ body {
   clear: both;
 }
 
-/* line 31, ../sass/partials/dashboard/_common.scss */
+/* line 32, ../sass/partials/dashboard/_common.scss */
 .ghost-input {
   background: rgba(255, 255, 255, 0.1);
   border: 0px;
   border-radius: 5px;
   text-align: inherit;
 }
-/* line 36, ../sass/partials/dashboard/_common.scss */
+/* line 37, ../sass/partials/dashboard/_common.scss */
 .ghost-input:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 45, ../sass/partials/dashboard/_common.scss */
+.sidebar-item {
+  box-sizing: border-box;
+  margin: 1rem 0px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #fccd4b;
+}
+/* line 52, ../sass/partials/dashboard/_common.scss */
+.sidebar-item .sidebar-icon::before {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  border: 1px solid #fccd4b;
+  border-radius: 50%;
+  padding: 0.5rem;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+/* line 63, ../sass/partials/dashboard/_common.scss */
+.sidebar-item .sidebar-label {
+  color: rgba(252, 205, 75, 0.5);
+}
+/* line 68, ../sass/partials/dashboard/_common.scss */
+.sidebar-item:hover .sidebar-icon::before {
+  color: #333;
+  background: #fccd4b;
+}
+
+/* line 76, ../sass/partials/dashboard/_common.scss */
+.ti-acoj-logo::before {
+  background-image: url("/images/logo.png");
+  background-size: contain;
+  border: 0px solid #fccd4b !important;
+  border-radius: 0px !important;
+  content: '\2003';
+}
+/* line 83, ../sass/partials/dashboard/_common.scss */
+.ti-acoj-logo::hover {
+  background: transparent;
 }
 
 /* make keyframes that tell the start state and the end state of our object */

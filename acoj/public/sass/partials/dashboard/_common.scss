@@ -4,7 +4,8 @@
 
 .dense-wrapper {
   min-height:100%;
-  background: url('/images/sos.png');
+  background-image: url('/images/sos.png');
+  background-attachment: fixed;
   .polythene { overflow:auto; }
 }
 
@@ -39,4 +40,47 @@
 }
 .error{
   @extend .small-text;
+}
+
+.sidebar-item {
+  box-sizing: border-box;
+  margin:1rem 0px;
+  display:block;
+  text-align: center;
+  width:100%;
+  color: $focal;
+  .sidebar-icon::before {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border: 1px solid $focal;
+    border-radius: 50%;
+    padding:0.5rem;
+    @include transition-property(all);
+    @include transition-duration(0.6s);
+  }
+  .sidebar-label {
+    color: rgba($focal, 0.5);
+    @extend .small-text;
+  }
+  &:hover {
+    .sidebar-icon::before {
+      color: $king-black;
+      background: $focal;
+    }
+  }
+}
+
+.ti-acoj-logo {
+  &::before {
+    background-image: url('/images/logo.png');
+    background-size: contain;
+    border:0px solid $focal !important;
+    border-radius: 0px !important;
+    content: '\2003';
+  }
+  &::hover {
+    background:transparent;
+  }
 }

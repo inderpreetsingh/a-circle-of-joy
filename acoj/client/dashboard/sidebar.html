@@ -1,13 +1,21 @@
 <template name="sidebar">
   {{#transition in="slideInLeft" out="slideOutLeft"}}
   <div class ="sidebar-container animated out">
-    <a class="sidebar-item">
-    <i class="sidebar-icon">
-    </i>
-    <span class="sidebar-label">
-
-    </span>
-  </a>
+    {{> sidebarItem icon="ti-acoj-logo" label=" " link="/"}}
+    {{> sidebarItem icon="ti-user" label="Profile" link="/dashboard/profile"}}
+    {{> sidebarItem icon="ti-headphone-alt" label="Groups" link="#"}}
+    {{> sidebarItem icon="ti-comments" label="Forums" link="http://forums.ishwerdas.com"}}
+    {{> sidebarItem icon="ti-info" label="Helpful Resources" link="#"}}
   </div>
   {{/transition}}
+</template>
+
+<template name="sidebarItem">
+  <a class="sidebar-item" href="{{ link }}">
+    <i class="sidebar-icon {{icon}}">
+    </i>
+    <p class="sidebar-label">
+      {{label}}
+    </p>
+  </a>
 </template>
