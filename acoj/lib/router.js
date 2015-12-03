@@ -7,14 +7,14 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/log-in', {
   action: function (params, queryParams) {
-    BlazeLayout.render('layout', { auth: 'login', main: 'dashboard' });
+    BlazeLayout.render('layout', { auth: 'login', main: 'alreadyLoggedIn' });
   },
   name: 'log-in'
 });
 
 FlowRouter.route('/sign-up', {
   action: function (params, queryParams) {
-    BlazeLayout.render('layout', { auth: 'signUp', main: 'dashboard'  });
+    BlazeLayout.render('layout', { auth: 'signUp', main: 'alreadyLoggedIn'  });
   },
   name: 'sign-up'
 });

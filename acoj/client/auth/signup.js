@@ -1,10 +1,12 @@
 Template.signUp.events({
+
   'submit form': function(e,t){
     event.preventDefault();
-    $('#sign-up-btn').attr('disabled', 'disabled');
+    toggleSpinner("2rem", "show");
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
     var username = $('[name=username]').val();
+    /** validations */
     if (isNotEmpty(email) &&
     isEmail(email) &&
     isNotEmpty(username) &&
@@ -16,17 +18,20 @@ Template.signUp.events({
         username: username
       }, function (error) {
         if (error) {
-            $('#sign-up-btn').removeAttr('disabled');
+          toggleSpinner("2rem","hide");
+          NProgress.stop();
           sAlert.error(error.reason);
         } else {
           sAlert.success("Your account has been created!");
-          sAlert.info("An email has been sent to your inbox. Verify your email address to continue.", {timeout: 'none'})
+          sAlert.info("An email has been sent to your inbox. Verify your email address to continue.", {timeout: 'none'});
           FlowRouter.go("/dashboard/profile/edit");
         }
       });
     } else {
-      $('#sign-up-btn').removeAttr('disabled');
+      toggleSpinner("2rem","hide");
     }
+
     return false;
   }
+
 });
