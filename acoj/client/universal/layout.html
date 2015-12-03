@@ -1,4 +1,5 @@
 <template name="layout">
+
   {{#if loggedIn }}
   {{> Template.dynamic template=main}}
   {{ else }}
@@ -13,7 +14,10 @@
       {{> logOut }}
       <div class = "paper">
         <div class="dash-panel">
-          <p class="large-text"> You are already logged in <a class="small-text" href="/dashboard/profile"> Close this </a></p>
+          <p class="large-text">
+            You are already logged in
+            <a class="small-text" href="/dashboard/profile"> Close this </a>
+          </p>
         </div>
         {{> profileCard}}
       </div>

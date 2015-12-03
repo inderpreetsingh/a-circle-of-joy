@@ -16,3 +16,7 @@ AutoForm.hooks({
     }
   }
 });
+
+Template.profileEditCard.onRendered(function() {
+  sAlert.info("Click or Tap on fields to edit them", {onRouteClose: true});
+});

@@ -1,5 +1,6 @@
 <template name="sidebar">
-  <div class ="sidebar-container">
+  {{#transition in="slideInLeft" out="slideOutLeft"}}
+  <div class ="sidebar-container animated out">
     <a class="sidebar-item">
     <i class="sidebar-icon">
     </i>
@@ -8,4 +9,5 @@
     </span>
   </a>
   </div>
+  {{/transition}}
 </template>

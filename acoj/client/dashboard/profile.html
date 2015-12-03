@@ -1,8 +1,12 @@
 <template name="profileEditCard">
   <!-- Contents from template profileCard -->
   <!-- 1 -->
-  <div class="picture"></div>
-
+  <a href="/dashboard/profile/"> Show </a>
+  <span>
+    {{#transition in ="fadeIn" out ="fadeOut"}}
+    <div class="picture animated out"></div>
+    {{/transition}}
+  </span>
   <!-- 2 -->
   <div class="dash-panel profile-panel">
     {{#autoForm collection="Profiles" id="updateProfileForm" doc=thisProfile autosave=true type="update"}}
@@ -68,7 +72,12 @@
 
 <Template name="profileCard">
   <!-- 1. Profile picture at top -->
-  <div class="picture"></div>
+  <a href="/dashboard/profile/edit"> Edit </a>
+  <span>
+    {{#transition in ="fadeIn" out ="fadeOut"}}
+    <div class="picture animated out"></div>
+    {{/transition}}
+  </span>
 
   <!-- 2. The white background card area -->
   <div class="dash-panel profile-panel">
@@ -97,28 +106,28 @@
       <!-- 5.1 First panel -->
       <div class="quad-panel">
         <i class="footer-icon ti-location-pin"></i>
-        {{thisProfile.country}}
+        <p>{{thisProfile.country}}</p>
       </div>
 
       <!-- 5.2 Second panel -->
       <div class="quad-panel quad-mid-panel">
         <i class="ti-email footer-icon"></i>
-        {{thisProfile.email}}
+        <p>{{thisProfile.email}}</p>
       </div>
 
       <!-- 5.3 Third panel -->
       <div class="quad-panel">
         <i class="ti-gift footer-icon"></i>
-        Born:
+        <p>Born:
         {{showDate thisProfile.birthday 'day'}}
-        {{showDate thisProfile.birthday 'month'}}
+        {{showDate thisProfile.birthday 'month'}}</p>
       </div>
 
       <!-- 5.4 Fourth panel -->
       <div class="quad-panel quad-last-panel">
         <i class="ti-heart footer-icon"></i>
-        Member Since:
-        {{showDate thisProfile.createdAt 'year'}}
+        <p>Member Since:
+        {{showDate thisProfile.createdAt 'year'}}</p>
       </div>
 
     </div>

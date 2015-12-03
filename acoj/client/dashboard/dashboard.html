@@ -1,7 +1,8 @@
 <template name="dashboard">
   {{#if loggedIn}}
+
   <div class="dense-wrapper">
-    {{> sidebar}}
+    <span>{{> sidebar}}</span>
     <div class ="stack">
       {{> logOut }}
       <div class = "paper">
@@ -11,5 +12,7 @@
   </div>
   {{else}}
   {{> login}}
+
   {{/if}}
+
 </template>
