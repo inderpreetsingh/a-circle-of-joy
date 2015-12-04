@@ -1,10 +1,10 @@
 <template name="dashboard">
   {{#if loggedIn}}
-
   <div class="dense-wrapper">
     <span>{{> sidebar}}</span>
+     {{> topBar}}
     <div class ="stack">
-      {{> logOut }}
+
       <div class = "paper">
         {{> Template.dynamic template=dash}}
       </div>

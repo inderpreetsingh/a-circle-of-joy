@@ -1,7 +1,7 @@
 <template name="profileEditCard">
   <!-- Contents from template profileCard -->
   <!-- 1 -->
-  <a href="/dashboard/profile/"> Show </a>
+  {{> mainIcon icon="ti-user" link="/dashboard/profile/" label="Show"}}
   <span>
     {{#transition in ="fadeIn" out ="fadeOut"}}
     <div class="picture animated out"></div>
@@ -72,7 +72,7 @@
 
 <Template name="profileCard">
   <!-- 1. Profile picture at top -->
-  <a href="/dashboard/profile/edit"> Edit </a>
+  {{> mainIcon icon="ti-pencil" label="Edit" link="/dashboard/profile/edit"}}
   <span>
     {{#transition in ="fadeIn" out ="fadeOut"}}
     <div class="picture animated out"></div>

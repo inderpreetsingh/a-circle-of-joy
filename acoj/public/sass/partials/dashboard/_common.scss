@@ -6,14 +6,16 @@
   min-height:100%;
   background-image: url('/images/sos.png');
   background-attachment: fixed;
-  .polythene { overflow:auto; }
+  @include media("<700px") {
+    padding-top: 3rem;
+  }
 }
 
 .paper {
   margin-left:5rem;
   padding: 1rem 1rem 2rem 1rem;
   border-radius: $mini-gutter;
-  @include media("<tablet") {
+  @include media("<700px") {
     margin:auto;
   }
 }
@@ -25,12 +27,13 @@
   background: $king-black;
   width:5rem;
   position:fixed;
+  z-index: 1000;
+  top:0;
   left:0;
-  @include media("<tablet") {
+  @include media("<700px") {
     width:100%;
     position: fixed;
-    bottom:0;
-    height:3rem; 
+    height:3rem;
   }
 }
 
@@ -82,7 +85,7 @@
       background-color: transparent;
     }
   }
-  @include media("<tablet"){
+  @include media("<700px"){
     display:inline-block;
     width: 2rem;
     margin: 0.5rem 1rem;
@@ -100,4 +103,53 @@
     border-radius: 0px !important;
     content: '\2003';
   }
+}
+.the-icon {
+  display: block;
+}
+
+.icon-label {
+  @extend .small-text;
+  display: block;
+}
+.simple-icon {
+  text-align: center;
+  display:inline-block;
+}
+
+.main-icon {
+  @extend .simple-icon;
+  position:fixed;
+  z-index: 1000;
+  bottom:1rem;
+  right: 1rem;
+  .the-icon {
+    color: $king-black;
+    font-size: 1.5rem;
+    background: $focal;
+    width:3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba($dead-black, 0.5);
+    &:hover {
+      background: $accent;
+    }
+  }
+  .icon-label {
+    color: $king-black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 3rem;
+  }
+}
+
+.top-bar {
+  vertical-align: middle;
+  width: 100%;
+  text-align: right;
+  text-transform: capitalize;
+  padding:0.5rem 0px;
+  .the-icon { font-size: 1rem;}
+  .simple-icon {padding :0px 0.5rem;}
 }

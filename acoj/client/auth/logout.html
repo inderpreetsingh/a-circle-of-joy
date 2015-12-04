@@ -1,5 +1,10 @@
 <template name="logOut">
-{{# onlyIfLoggedIn}}
-  <a href="#" id="logout"> Log Out </a>
-{{/ onlyIfLoggedIn}}
+{{#if loggedIn}}
+<div class="simple-icon">
+  <a href="#" id="logout">
+    <i class="the-icon ti-power-off"> </i>
+    <span class="icon-label"> Logout </span>
+  </a>
+</div>
+{{/if}}
 </template>

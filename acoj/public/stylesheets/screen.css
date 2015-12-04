@@ -158,10 +158,10 @@ a {
 }
 
 /* line 1, ../sass/partials/typography/_type_scale.scss */
-.small-text, .error, .sidebar-item .sidebar-label, .profile-footer, .s-alert-error.s-alert-effect-genie,
+.small-text, .error, .sidebar-item .sidebar-label, .icon-label, .profile-footer, .s-alert-error.s-alert-effect-genie,
 .s-alert-success.s-alert-effect-genie,
 .s-alert-info.s-alert-effect-genie,
-.s-alert-warning.s-alert-effect-genie, .small-text a, .error a, .sidebar-item .sidebar-label a, .profile-footer a, .s-alert-error.s-alert-effect-genie a,
+.s-alert-warning.s-alert-effect-genie, .small-text a, .error a, .sidebar-item .sidebar-label a, .icon-label a, .profile-footer a, .s-alert-error.s-alert-effect-genie a,
 .s-alert-success.s-alert-effect-genie a,
 .s-alert-info.s-alert-effect-genie a,
 .s-alert-warning.s-alert-effect-genie a {
@@ -944,7 +944,7 @@ body {
   margin-right: 0;
 }
 /* line 152, ../sass/partials/_frontpage.scss */
-.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .error, .blue-box .sidebar-item .sidebar-label, .sidebar-item .blue-box .sidebar-label, .blue-box .profile-footer, .blue-box .s-alert-error.s-alert-effect-genie,
+.blue-box .special-text, .blue-box .menu-icon-container::after, .blue-box .small-text, .blue-box .error, .blue-box .sidebar-item .sidebar-label, .sidebar-item .blue-box .sidebar-label, .blue-box .icon-label, .blue-box .profile-footer, .blue-box .s-alert-error.s-alert-effect-genie,
 .blue-box .s-alert-success.s-alert-effect-genie,
 .blue-box .s-alert-info.s-alert-effect-genie,
 .blue-box .s-alert-warning.s-alert-effect-genie {
@@ -1150,48 +1150,51 @@ body {
   background-image: url("/images/sos.png");
   background-attachment: fixed;
 }
-/* line 9, ../sass/partials/dashboard/_common.scss */
-.dense-wrapper .polythene {
-  overflow: auto;
+@media (max-width: 699px) {
+  /* line 5, ../sass/partials/dashboard/_common.scss */
+  .dense-wrapper {
+    padding-top: 3rem;
+  }
 }
 
-/* line 12, ../sass/partials/dashboard/_common.scss */
+/* line 14, ../sass/partials/dashboard/_common.scss */
 .paper {
   margin-left: 5rem;
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 5px;
 }
-@media (max-width: 767px) {
-  /* line 12, ../sass/partials/dashboard/_common.scss */
+@media (max-width: 699px) {
+  /* line 14, ../sass/partials/dashboard/_common.scss */
   .paper {
     margin: auto;
   }
 }
 
-/* line 21, ../sass/partials/dashboard/_common.scss */
+/* line 23, ../sass/partials/dashboard/_common.scss */
 .padded {
   padding: 1rem;
 }
 
-/* line 23, ../sass/partials/dashboard/_common.scss */
+/* line 25, ../sass/partials/dashboard/_common.scss */
 .sidebar-container {
   height: 100%;
   background: #333;
   width: 5rem;
   position: fixed;
+  z-index: 1000;
+  top: 0;
   left: 0;
 }
-@media (max-width: 767px) {
-  /* line 23, ../sass/partials/dashboard/_common.scss */
+@media (max-width: 699px) {
+  /* line 25, ../sass/partials/dashboard/_common.scss */
   .sidebar-container {
     width: 100%;
     position: fixed;
-    bottom: 0;
     height: 3rem;
   }
 }
 
-/* line 37, ../sass/partials/dashboard/_common.scss */
+/* line 40, ../sass/partials/dashboard/_common.scss */
 .stack {
   max-width: 60rem;
   margin-left: auto;
@@ -1204,19 +1207,19 @@ body {
   clear: both;
 }
 
-/* line 41, ../sass/partials/dashboard/_common.scss */
+/* line 44, ../sass/partials/dashboard/_common.scss */
 .ghost-input {
   background: rgba(255, 255, 255, 0.1);
   border: 0px;
   border-radius: 5px;
   text-align: inherit;
 }
-/* line 46, ../sass/partials/dashboard/_common.scss */
+/* line 49, ../sass/partials/dashboard/_common.scss */
 .ghost-input:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* line 54, ../sass/partials/dashboard/_common.scss */
+/* line 57, ../sass/partials/dashboard/_common.scss */
 .sidebar-item {
   box-sizing: border-box;
   margin: 1rem 0px;
@@ -1225,7 +1228,7 @@ body {
   width: 100%;
   color: #fccd4b;
 }
-/* line 61, ../sass/partials/dashboard/_common.scss */
+/* line 64, ../sass/partials/dashboard/_common.scss */
 .sidebar-item .sidebar-icon::before {
   width: 2rem;
   height: 2rem;
@@ -1243,39 +1246,102 @@ body {
   -webkit-transition-duration: 0.6s;
   transition-duration: 0.6s;
 }
-/* line 72, ../sass/partials/dashboard/_common.scss */
+/* line 75, ../sass/partials/dashboard/_common.scss */
 .sidebar-item .sidebar-label {
   color: rgba(252, 205, 75, 0.7);
 }
-/* line 77, ../sass/partials/dashboard/_common.scss */
+/* line 80, ../sass/partials/dashboard/_common.scss */
 .sidebar-item:hover .sidebar-icon::before {
   color: #333;
   background-color: #fccd4b;
 }
-/* line 81, ../sass/partials/dashboard/_common.scss */
+/* line 84, ../sass/partials/dashboard/_common.scss */
 .sidebar-item:hover .ti-acoj-logo::before {
   background-color: transparent;
 }
-@media (max-width: 767px) {
-  /* line 54, ../sass/partials/dashboard/_common.scss */
+@media (max-width: 699px) {
+  /* line 57, ../sass/partials/dashboard/_common.scss */
   .sidebar-item {
     display: inline-block;
     width: 2rem;
     margin: 0.5rem 1rem;
   }
-  /* line 89, ../sass/partials/dashboard/_common.scss */
+  /* line 92, ../sass/partials/dashboard/_common.scss */
   .sidebar-item .sidebar-label {
     display: none;
   }
 }
 
-/* line 96, ../sass/partials/dashboard/_common.scss */
+/* line 99, ../sass/partials/dashboard/_common.scss */
 .ti-acoj-logo::before {
   background-image: url("/images/logo.png");
   background-size: contain;
   border: 0px solid #fccd4b !important;
   border-radius: 0px !important;
   content: '\2003';
+}
+
+/* line 107, ../sass/partials/dashboard/_common.scss */
+.the-icon {
+  display: block;
+}
+
+/* line 111, ../sass/partials/dashboard/_common.scss */
+.icon-label {
+  display: block;
+}
+
+/* line 115, ../sass/partials/dashboard/_common.scss */
+.simple-icon, .main-icon {
+  text-align: center;
+  display: inline-block;
+}
+
+/* line 120, ../sass/partials/dashboard/_common.scss */
+.main-icon {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1rem;
+  right: 1rem;
+}
+/* line 126, ../sass/partials/dashboard/_common.scss */
+.main-icon .the-icon {
+  color: #333;
+  font-size: 1.5rem;
+  background: #fccd4b;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* line 135, ../sass/partials/dashboard/_common.scss */
+.main-icon .the-icon:hover {
+  background: #3498db;
+}
+/* line 139, ../sass/partials/dashboard/_common.scss */
+.main-icon .icon-label {
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 3rem;
+}
+
+/* line 147, ../sass/partials/dashboard/_common.scss */
+.top-bar {
+  vertical-align: middle;
+  width: 100%;
+  text-align: right;
+  text-transform: capitalize;
+  padding: 0.5rem 0px;
+}
+/* line 153, ../sass/partials/dashboard/_common.scss */
+.top-bar .the-icon {
+  font-size: 1rem;
+}
+/* line 154, ../sass/partials/dashboard/_common.scss */
+.top-bar .simple-icon, .top-bar .main-icon {
+  padding: 0px 0.5rem;
 }
 
 /* make keyframes that tell the start state and the end state of our object */
@@ -1413,11 +1479,12 @@ body {
   background: #fff;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /** 3. The cover image **/
 /** 3.1 Cover image background and overlay **/
-/* line 27, ../sass/partials/dashboard/_profile.scss */
+/* line 28, ../sass/partials/dashboard/_profile.scss */
 .cover-image {
   position: relative;
   z-index: 100;
@@ -1429,7 +1496,7 @@ body {
   border-bottom: 2px solid #3498db;
 }
 
-/* line 38, ../sass/partials/dashboard/_profile.scss */
+/* line 39, ../sass/partials/dashboard/_profile.scss */
 .darken {
   width: 100%;
   height: 100%;
@@ -1438,7 +1505,7 @@ body {
 }
 
 /** 3.2 Title and status inside cover image **/
-/* line 46, ../sass/partials/dashboard/_profile.scss */
+/* line 47, ../sass/partials/dashboard/_profile.scss */
 .profile-heading, .dash-heading, .dash-heading input {
   font-weight: 300;
   max-width: 100%;
@@ -1448,13 +1515,13 @@ body {
   text-shadow: 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 56, ../sass/partials/dashboard/_profile.scss */
+/* line 57, ../sass/partials/dashboard/_profile.scss */
 .dash-heading {
   padding-top: 5.5rem;
 }
 
 /** 4. The about me part **/
-/* line 66, ../sass/partials/dashboard/_profile.scss */
+/* line 67, ../sass/partials/dashboard/_profile.scss */
 .bio {
   width: 100%;
   max-width: 30rem;
@@ -1464,7 +1531,7 @@ body {
   font-size: 1rem;
 }
 
-/* line 75, ../sass/partials/dashboard/_profile.scss */
+/* line 76, ../sass/partials/dashboard/_profile.scss */
 textarea.bio {
   border: 1px solid #ccc;
   text-align: center;
@@ -1472,7 +1539,7 @@ textarea.bio {
 }
 
 /** 5. Profile Footer **/
-/* line 81, ../sass/partials/dashboard/_profile.scss */
+/* line 82, ../sass/partials/dashboard/_profile.scss */
 .profile-footer {
   max-width: 100%;
   margin-left: auto;
@@ -1487,20 +1554,20 @@ textarea.bio {
   display: block;
   clear: both;
 }
-/* line 87, ../sass/partials/dashboard/_profile.scss */
+/* line 88, ../sass/partials/dashboard/_profile.scss */
 .profile-footer .footer-icon {
   background: rgba(0, 0, 0, 0.6);
   color: #fafafa;
   border-radius: 50%;
   padding: 5px;
 }
-/* line 93, ../sass/partials/dashboard/_profile.scss */
+/* line 94, ../sass/partials/dashboard/_profile.scss */
 .profile-footer input {
   border: 1px solid #666;
 }
 
 /** Common styles for footer panels **/
-/* line 99, ../sass/partials/dashboard/_profile.scss */
+/* line 100, ../sass/partials/dashboard/_profile.scss */
 .quad-panel {
   box-sizing: border-box;
   padding-left: 1rem;
@@ -1510,7 +1577,7 @@ textarea.bio {
   margin-right: 5.26316%;
 }
 @media (max-width: 699px) {
-  /* line 99, ../sass/partials/dashboard/_profile.scss */
+  /* line 100, ../sass/partials/dashboard/_profile.scss */
   .quad-panel {
     width: 47.36842%;
     float: left;
@@ -1519,7 +1586,7 @@ textarea.bio {
 }
 
 /** 5.4 Panel 4 **/
-/* line 110, ../sass/partials/dashboard/_profile.scss */
+/* line 111, ../sass/partials/dashboard/_profile.scss */
 .quad-last-panel {
   width: 21.05263%;
   float: right;
@@ -1528,7 +1595,7 @@ textarea.bio {
 
 /** 5.2, 5.4 Panel 2 & 4 **/
 @media (max-width: 699px) {
-  /* line 115, ../sass/partials/dashboard/_profile.scss */
+  /* line 116, ../sass/partials/dashboard/_profile.scss */
   .quad-last-panel, .quad-mid-panel {
     width: 47.36842%;
     float: right;
@@ -1541,35 +1608,42 @@ textarea.bio {
 .s-alert-success.s-alert-effect-genie,
 .s-alert-info.s-alert-effect-genie,
 .s-alert-warning.s-alert-effect-genie {
-  border-radius: 500px;
+  border-radius: 500rem;
+  min-width: 10rem;
   font-family: "Ubuntu", sans-serif;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-/* line 12, ../sass/partials/dashboard/_notifications.scss */
+/* line 13, ../sass/partials/dashboard/_notifications.scss */
+.s-alert-top-right {
+  top: 4rem;
+}
+
+/* line 17, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-close {
   top: -10px;
-  right: -10px;
+  left: -10px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
 }
 
-/* line 19, ../sass/partials/dashboard/_notifications.scss */
+/* line 24, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-error.s-alert-effect-genie {
   background-color: rgba(192, 57, 43, 0.7);
 }
 
-/* line 23, ../sass/partials/dashboard/_notifications.scss */
+/* line 28, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-success.s-alert-effect-genie {
   background-color: rgba(135, 211, 124, 0.7);
 }
 
-/* line 27, ../sass/partials/dashboard/_notifications.scss */
+/* line 32, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-info.s-alert-effect-genie {
   background-color: rgba(52, 152, 219, 0.7);
 }
 
-/* line 31, ../sass/partials/dashboard/_notifications.scss */
+/* line 36, ../sass/partials/dashboard/_notifications.scss */
 .s-alert-warning.s-alert-effect-genie {
   background-color: rgba(252, 205, 75, 0.7);
 }
