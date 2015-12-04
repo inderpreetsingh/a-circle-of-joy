@@ -1230,25 +1230,25 @@ body {
 }
 /* line 63, ../sass/partials/dashboard/_common.scss */
 .sidebar-item .sidebar-label {
-  color: rgba(252, 205, 75, 0.5);
+  color: rgba(252, 205, 75, 0.7);
 }
 /* line 68, ../sass/partials/dashboard/_common.scss */
 .sidebar-item:hover .sidebar-icon::before {
   color: #333;
-  background: #fccd4b;
+  background-color: #fccd4b;
+}
+/* line 72, ../sass/partials/dashboard/_common.scss */
+.sidebar-item:hover .ti-acoj-logo::before {
+  background-color: transparent;
 }
 
-/* line 76, ../sass/partials/dashboard/_common.scss */
+/* line 79, ../sass/partials/dashboard/_common.scss */
 .ti-acoj-logo::before {
   background-image: url("/images/logo.png");
   background-size: contain;
   border: 0px solid #fccd4b !important;
   border-radius: 0px !important;
   content: '\2003';
-}
-/* line 83, ../sass/partials/dashboard/_common.scss */
-.ti-acoj-logo::hover {
-  background: transparent;
 }
 
 /* make keyframes that tell the start state and the end state of our object */

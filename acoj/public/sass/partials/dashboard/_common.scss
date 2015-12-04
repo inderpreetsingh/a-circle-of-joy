@@ -61,13 +61,16 @@
     @include transition-duration(0.6s);
   }
   .sidebar-label {
-    color: rgba($focal, 0.5);
+    color: rgba($focal, 0.7);
     @extend .small-text;
   }
   &:hover {
     .sidebar-icon::before {
       color: $king-black;
-      background: $focal;
+      background-color: $focal;
+    }
+    .ti-acoj-logo::before {
+      background-color: transparent;
     }
   }
 }
@@ -79,8 +82,5 @@
     border:0px solid $focal !important;
     border-radius: 0px !important;
     content: '\2003';
-  }
-  &::hover {
-    background:transparent;
   }
 }
