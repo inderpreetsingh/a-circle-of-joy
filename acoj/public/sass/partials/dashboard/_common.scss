@@ -13,6 +13,9 @@
   margin-left:5rem;
   padding: 1rem 1rem 2rem 1rem;
   border-radius: $mini-gutter;
+  @include media("<tablet") {
+    margin:auto;
+  }
 }
 
 .padded { padding: 1rem;}
@@ -23,6 +26,12 @@
   width:5rem;
   position:fixed;
   left:0;
+  @include media("<tablet") {
+    width:100%;
+    position: fixed;
+    bottom:0;
+    height:3rem; 
+  }
 }
 
 .stack {
@@ -71,6 +80,14 @@
     }
     .ti-acoj-logo::before {
       background-color: transparent;
+    }
+  }
+  @include media("<tablet"){
+    display:inline-block;
+    width: 2rem;
+    margin: 0.5rem 1rem;
+    .sidebar-label {
+      display:none;
     }
   }
 }
