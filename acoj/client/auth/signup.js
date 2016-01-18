@@ -1,7 +1,7 @@
 Template.signUp.events({
 
   'submit form': function(e,t){
-    event.preventDefault();
+    e.preventDefault();
     toggleSpinner("2rem", "show");
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
